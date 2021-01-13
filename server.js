@@ -1,13 +1,17 @@
 const express = require('express')
 const app = express()
-// const http = require('http').Server(app)
-// const io = require('socket.io')(http)
+
+const publicacion_controlles = require('./controllers/publicacionControlles')
 
 let port = 8080
 
-app.use(express.static('public'))
+app.use(express.json())
+// app.use(express.static('public'))
 
-app.get('/', (req, res)=>res.send())
+//get post put delete
+app.get('/', publicacion_controlles.obtenerPublicacion)
+
+app.post('/publicacion', publicacion_controlles.agregarPublicacion)
 
 
 
@@ -16,6 +20,3 @@ app.listen(port,()=>{
 })
 
 
-// http.listen(puerto, ()=>{
-//     console.log(`Escuchando puerto: ${puerto}`)
-//   })
