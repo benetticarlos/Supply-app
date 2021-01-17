@@ -110,3 +110,8 @@
     width: -webkit-fill-available;
     height: auto;
 }
+/* estilos de login */
+#staticEmail2{
+    background-color: #eeeeee;
+    color:black
+}
