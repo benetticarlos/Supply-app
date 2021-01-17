@@ -13,6 +13,10 @@ app.get('/', publicacion_controlles.obtenerPublicacion)
 
 app.post('/publicacion', publicacion_controlles.agregarPublicacion)
 
+app.delete('/borrar', publicacion_controlles.borrarPublicacion)
+
+app.put('/editar', publicacion_controlles.editarPublicacion)
+
 
 
 

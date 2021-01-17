@@ -29,8 +29,38 @@ const agregarPublicacion = (req, res)=>{
         res.send("alta exitosa")
 }
 
+const borrarPublicacion = (req, res) => {
+    const {id} = req.body
+    conexion_db.query('DELETE FROM `mipublicacion_t` WHERE id = ?',[id] ,(err, result) =>{
+if(err){
+    throw err
+}else{
+    console.log(result)
+    res.send('elemento borrado')
+}
+    })
+    console.log('elemento borrado')
+}
+
+const editarPublicacion = (req, res) =>{
+    const {id, publicacion, detalle} = req.body
+    conexion_db.query('UPDATE `mipublicacion_t` SET `publicacion`=?,`detalle`=? WHERE id = ?',[publicacion, detalle, id],(err, result) =>{
+        if(err){
+            throw err
+        }else{
+            console.log(result)
+            res.send('elemento editado')
+        }
+            })
+            console.log('elemento editado')
+        }
+
+
+
   
 module.exports = {
                     obtenerPublicacion,
-                    agregarPublicacion
+                    agregarPublicacion,
+                    borrarPublicacion,
+                    editarPublicacion
                 }
