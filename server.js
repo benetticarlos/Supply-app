@@ -6,7 +6,8 @@ const publicacion_controlles = require('./controllers/publicacionControlles')
 let port = 8080
 
 app.use(express.json())
-// app.use(express.static('public'))
+
+app.use(express.static('public'))
 
 //get post put delete
 app.get('/', publicacion_controlles.obtenerPublicacion)

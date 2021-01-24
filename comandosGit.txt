@@ -29,7 +29,7 @@ git remote -v
 
 
 //crear ramas
-git braunch nombreDeRama
+git branch nombreDeRama
 
 //moverse entre ramas
 git checkout nombreDeRama
@@ -51,6 +51,9 @@ git clone https://github.com/benetticarlos/RepositorioGitHub.git
 
 //subir una actualizacion al servidor
 git push origin master
+
+//subir una rama al servidor
+git push origin nombreRama
 
 //traer cambios desde el repositorio a la carpeta local
 git pull origin master
