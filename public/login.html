@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
     
     <title>Login</title>
 </head>
@@ -29,9 +30,10 @@
         </a>
         </div>
     </nav>
-    <div class="contenedor-ingresos">
-        <form class="row g-3">
-            <div class="col-auto">
+    <div class="contenedor-ingresos contenedor-login">
+        <form class="row g-3" id="formularioRegistro">
+          <h2>Registro de Usuarios</h2>
+          <div class="col-auto">
               <label for="staticEmail2" class="visually-hidden">Email</label>
               <input type="text" class="form-control-plaintext" id="staticEmail2" value="email@example.com">
             </div>
@@ -43,53 +45,94 @@
               <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Confirm identity</button>
             </div>
           </form>
+
+          <form class="row g-3" id="formularioLogin">
+            <h2>Login de Usuarios</h2>
+            <div class="col-auto">
+                <label for="staticEmail2" class="visually-hidden">Email</label>
+                <input type="text" class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+              </div>
+              <div class="col-auto">
+                <label for="inputPassword2" class="visually-hidden">Password</label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+              </div>
+              <div class="col-auto">
+                <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Confirm identity</button>
+              </div>
+            </form>
     </div>
    
-    
+    <!-- <script src="./js/script.js"></script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
     
-
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
+    <!-- //The core Firebase JS SDK is always required and must be listed first --> -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <!-- <script src="../controllers/loginControllers.js"></script> -->
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAn8mF8akEqrB2GajlvfW0N67pFMfv4bfA",
-    authDomain: "proyectofinal-95c98.firebaseapp.com",
-    projectId: "proyectofinal-95c98",
-    storageBucket: "proyectofinal-95c98.appspot.com",
-    messagingSenderId: "342957279584",
-    appId: "1:342957279584:web:9f1f27bb08ca5422de3605"
+    // Your web app's Firebase configuration
+//   var firebaseConfig = {
+//     apiKey: "AIzaSyAn8mF8akEqrB2GajlvfW0N67pFMfv4bfA",
+//     authDomain: "proyectofinal-95c98.firebaseapp.com",
+//     projectId: "proyectofinal-95c98",
+//     storageBucket: "proyectofinal-95c98.appspot.com",
+//     messagingSenderId: "342957279584",
+//     appId: "1:342957279584:web:9f1f27bb08ca5422de3605"
+//   };
+//base prueba
+// Your web app's Firebase configuration
+
+var firebaseConfig = {
+    apiKey: "AIzaSyDEHn6TxLcKUoJ-n9362w0HNaVBTuffpe0",
+    authDomain: "proyectofinal-9b976.firebaseapp.com",
+    projectId: "proyectofinal-9b976",
+    storageBucket: "proyectofinal-9b976.appspot.com",
+    messagingSenderId: "935267993825",
+    appId: "1:935267993825:web:57e3a7957dcbe64bd60fa0"
   };
+
+
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+
+
+
 
 <script>
 const botonDeRegistro = document.querySelector("#botonDeRegistro")
 const  campoEmail = document.querySelector("#staticEmail2")
 const  campoPassword = document.querySelector("#inputPassword2")
+
+
+const formularioRegistro = document.querySelector("#formularioRegistro")
+
+
 botonDeRegistro.addEventListener("click",(e)=>{
     e.preventDefault()
-    console.log(campoEmail.value,campoPassword.value)
+    
+    // console.log(campoEmail.value,campoPassword.value)
     registroUsuario(campoEmail.value, campoPassword.value)
     // logueoUsuario(campoEmail.value, campoPassword.value)
+
+    
 })
-const registroUsuario = (email,password) => {
+</script>
+
+<script>
+  const registroUsuario = (email,password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((user) => {
-      // Signed in
-      // ...
+      
+      escucharCambioUsuario()
+      
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
+      console.log(errorCode, errorMessage)
       // ..
     });}
 const logueoUsuario = (email,password) => {
@@ -103,6 +146,26 @@ const logueoUsuario = (email,password) => {
     var errorMessage = error.message;
   });
 }
-    </script>
+
+const escucharCambioUsuario = ()=>{
+  var user = firebase.auth().currentUser;
+  var name, email, photoUrl, uid, emailVerified;
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                    // this value to authenticate with your backend server, if
+                    // you have one. Use User.getToken() instead.
+    console.log(`El usuario ${email} se registro con exito`)                 
+  }else{
+    console.log("Error al loguear ususario")
+  }
+}
+</script>
+
+
 </body>
 </html>
