@@ -113,12 +113,27 @@
 /* estilos de login */
 #staticEmail2{
     background-color: #eeeeee;
-    color:black
+    color:black;
+    border-radius: 5px;
 }
 
 .contenedor-login{
     height: 100vh;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#formularioRegistro {
+ display: none;
+}
+
+h2{
+    color: beige;
+}
+.row {
+    display: initial;
+}
+#btn-iniciarSesion{
+    display: none;
 }

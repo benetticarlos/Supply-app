@@ -24,8 +24,8 @@
                 </span>
             </div>
             <div class="contenedor-registro">
-                <button type="button" class="btn-navbar btn ">Iniciar Sesion</button>
-                <button type="button" class="btn-navbar btn ">Registrarse</button>
+                <button type="button" class="btn-navbar btn " id="btn-iniciarSesion">Iniciar Sesion</button>
+                <button type="button" class="btn-navbar btn " id="btn-Registrar">Registrarse</button>
             </div>
         </a>
         </div>
@@ -42,7 +42,7 @@
               <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
             </div>
             <div class="col-auto">
-              <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Confirm identity</button>
+              <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Registrar</button>
             </div>
           </form>
 
@@ -57,13 +57,12 @@
                 <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
               </div>
               <div class="col-auto">
-                <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Confirm identity</button>
+                <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Login</button>
               </div>
             </form>
     </div>
    
-    <!-- <script src="./js/script.js"></script> -->
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
     
@@ -71,7 +70,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <!-- <script src="../controllers/loginControllers.js"></script> -->
-<script>
+    <script src="./js/script.js"></script>
+<!-- <script>
     // Your web app's Firebase configuration
 //   var firebaseConfig = {
 //     apiKey: "AIzaSyAn8mF8akEqrB2GajlvfW0N67pFMfv4bfA",
@@ -125,7 +125,7 @@ botonDeRegistro.addEventListener("click",(e)=>{
   const registroUsuario = (email,password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((user) => {
-      
+      console.log(`El susuario ${email} se registro con exito`)
       escucharCambioUsuario()
       
     })
@@ -159,12 +159,12 @@ const escucharCambioUsuario = ()=>{
     uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
                     // this value to authenticate with your backend server, if
                     // you have one. Use User.getToken() instead.
-    console.log(`El usuario ${email} se registro con exito`)                 
-  }else{
+    console.log(`El susuario ${email} esta logueado`)
+  }else{  
     console.log("Error al loguear ususario")
   }
 }
-</script>
+</script> -->
 
 
 </body>
