@@ -144,3 +144,28 @@
      width: 100%;
      max-width: initial;
  }
+ #modalFooter{
+     display: block;
+ }
+ #cuerpoModal{
+     padding: 0;
+ }
+ #cardBody{
+     padding: 0;
+     height: 100%;
+     border: 0;
+ }
+ #cardCaja{
+     border: 0;
+    }
+#modalHeader, #cardMb-3{
+        
+        border: 0;
+ }
+ #cardMb-3{
+     margin: 0 !important;
+ }
+ #modalContent {
+    height: 100vh !important;
+    overflow: auto;
+ }
