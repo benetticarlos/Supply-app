@@ -15,7 +15,7 @@
     height: 100vh;
     overflow: hidden;
     padding: 0%;
-
+    background-color: var(--oscuro);
 }
 .container::before {
     content: "";
@@ -90,6 +90,11 @@
     display: flex;
     justify-content: space-between;
 }
+
+.d-inline-block {
+    width: auto;
+    height: 7vh;
+}
 .contenedor-ingresos {
     display: flex;
     justify-content: space-evenly;;
@@ -147,11 +152,18 @@
 .nombre-app {
     color: var(--oscuro);
     font-weight: bold;
+<<<<<<< HEAD
+    
+    font-size: 4vh;
+
+
+=======
     margin-left: 30px;
 }
 #imagenNavbar{
     width: 40px;
     height: 40px;
+>>>>>>> 30425b217b666a8d888a7e21b45408da87bc763c
 }
 
 
@@ -183,6 +195,160 @@
     width: -webkit-fill-available;
     height: auto;
 }
+<<<<<<< HEAD
+
+
+/* publicarBusqueda */
+
+.titulo-busqueda {
+    box-sizing: border-box;
+    height: fit-content;
+    color: #eeeeee;
+    text-align: center;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+}
+
+.seleccion {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+
+.buscoProducto {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.buscoServicio {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+    .iconoBusqueda {
+        background-color: #eeeeee;
+    border-radius: 10%;
+    margin: auto;
+    width: 15vw
+    }
+
+    .botonBusqueda {
+        margin-top: 6vh;
+    }
+
+    .btn-buscar {
+        font-size: 2rem;
+        width: 160px;
+        border-radius: 10px;
+        
+    }
+    .btn-buscar {
+        background-color: var(--celeste);
+        color: var(--oscuro);
+        border-color: var(--celeste);
+        
+        border-width: 3px;
+    }
+    .btn-buscar:hover {
+        border-color: var(--celeste);
+        color:var(--celeste);
+        border-width: 3px;
+        background-color: var(--oscuro);
+    }
+
+
+
+    /* formularioProducto */
+
+    .form-productos{
+        width: 42%;
+        margin-right: 10vw;
+    margin-left: 6vw;
+    margin-top: 7vh;
+    }
+
+    .form-label {
+        color: #eeeeee;
+        
+    font-size: 1.8rem;
+    font-weight: bolder;
+
+    }
+
+    .form-check-label {
+        color: #eeeeee;
+    }
+
+    .form-control{
+        width: 50%;
+    }
+
+    .form-select{
+        width: 50%;
+    }
+
+    .imagen-descarga {
+        
+    margin-top: 10vh;
+
+    }
+
+    .imagen-descarga h4{
+        color: #eeeeee;
+    }
+
+    .imagen-opcional {
+        background-color: #eeeeee;
+        width: 35vh;
+        height: 35vh;
+        display: flex;
+        border-radius: 30px;
+        
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+
+    }
+
+    .iconoDescarga {
+        width: 20vh;
+        margin: auto;
+    }
+
+    .boton-publicarBusqueda {
+        width: fit-content;
+        margin: auto;
+    }
+=======
 /* estilos de login */
 #staticEmail2{
     background-color: #eeeeee;
@@ -210,3 +376,4 @@ h2{
 #btn-iniciarSesion{
     display: none;
 }
+>>>>>>> 30425b217b666a8d888a7e21b45408da87bc763c
