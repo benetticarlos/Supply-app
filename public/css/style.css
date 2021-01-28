@@ -207,3 +207,67 @@
         border-width: 3px;
         background-color: var(--oscuro);
     }
+
+
+
+    /* formularioProducto */
+
+    .form-productos{
+        width: 42%;
+        margin-right: 10vw;
+    margin-left: 6vw;
+    margin-top: 7vh;
+    }
+
+    .form-label {
+        color: #eeeeee;
+        
+    font-size: 1.8rem;
+    font-weight: bolder;
+
+    }
+
+    .form-check-label {
+        color: #eeeeee;
+    }
+
+    .form-control{
+        width: 50%;
+    }
+
+    .form-select{
+        width: 50%;
+    }
+
+    .imagen-descarga {
+        
+    margin-top: 10vh;
+
+    }
+
+    .imagen-descarga h4{
+        color: #eeeeee;
+    }
+
+    .imagen-opcional {
+        background-color: #eeeeee;
+        width: 35vh;
+        height: 35vh;
+        display: flex;
+        border-radius: 30px;
+        
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+
+    }
+
+    .iconoDescarga {
+        width: 20vh;
+        margin: auto;
+    }
+
+    .boton-publicarBusqueda {
+        width: fit-content;
+        margin: auto;
+    }
