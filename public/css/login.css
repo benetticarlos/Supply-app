@@ -1,100 +1,73 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-}
-body{
-    background: url(../images/stock.jpg);
-    background-size: cover;
-}
 
-.nav{
+
+/* login firebase */
+
+
+.container::before {
+    content: "";
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-}
-
-.container{
-    position: relative;
-    background: rgba(0, 0, 0, .7);
-    width: 100%;
-    max-width: 500px;
-    margin: 48px auto;
-    color: white;
-    border-radius: 5px;
-    padding: 40px;
-}    
-
-#toggle{
+    height: 100%;
+    background-color: rgba(190, 177, 177, 0.897);
+    z-index: 1000;
     position: absolute;
-    top: 7px;
-    right: 7px;width: 100px;
-    height: 30px;font-size: 12px;
-    line-height: 25px;
-    text-align: center;
-    border: 2px solid #ff851b;
-    transition: all .5s ease;
-    cursor: pointer;
+    animation: borrarBlanco 1s ease-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
 }
-
-#toggle:hover{
-    border: 2px solid blue;
+@keyframes borrarBlanco{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    100%{
+        width: 0;
+        height: 0;
+    }
+    
 }
-
-h2{
-    margin: 0 0 28px 0;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1;
+#imagenNavbar {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    /* transform:  scale(3); */
+    animation: animationLogo 3s ease-in-out;
+    /* transition: 5s ease; */
+    z-index: 12000;
 }
-
-.container input[type="text"],
-.container input[type="password"],
-.container input[type="email"] {
-    outline: none;
-    background: rgba(0, 0, 0, 0.616);
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    /* border-bottom: 4px solid #ff851b; */
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0 0 20px 0;
-}
-
-.container input[type="submit"]{
-background: #ff851b;
-color: white;
-border: none;
-width: 100%;
-padding: 10px 0;
-font-weight: normal;
-letter-spacing: 1px;
-font-size: 16px;
-cursor: pointer;
-transition: all .5s ease;
-}
-
-.container input[type="submit"]:hover{
-    background: blue;
-}
-
-.container .reset-password {
-    /* background: blue; */
-    color: blue;
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
-}
-
-.formulario {
-    padding: 40px;
-    display: block;
-}
-
-#crear-cuenta{
-    display: none;
-    transition: all .5s ease;
+@keyframes animationLogo {
+    0%{
+        transform: scale(4) rotateY(1200deg);
+        position: absolute;
+        top: 450%;
+        left: 50%;
+    }
+    20%{
+        transform: scale(4) rotateY(120deg);
+        position: absolute;
+        top: 450%;
+        left: 50%;
+        
+    }
+    50%{ 
+        transform: scale(4) rotateY(120deg);
+        position: absolute;
+        top: 450%;
+        left: 50%;
+        
+    }
+    70%{ 
+        
+      
+    }
+    90%{ 
+        
+       
+    }
+    100%{
+        transform: scale(1) ;
+        top: 0%;
+        left: 0%;
+    }
 }

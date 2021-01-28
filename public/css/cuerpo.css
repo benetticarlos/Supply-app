@@ -152,7 +152,7 @@
         background: #ccc;
         border-radius: 4px;
     } */
- }
+ 
  #cuerpoModal{
      padding: 0;
  }
@@ -177,8 +177,8 @@
     position: relative;
  }
  #btnClose{
-     position: fixed;
-     right: 182px;
+     position: absolute;
+     right: 11px;
      z-index: 20;
-     top: 38px;
+     top: 11px;
  }
