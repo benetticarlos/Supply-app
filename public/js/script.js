@@ -1,7 +1,5 @@
 
 
-
-
 //base original
     // Your web app's Firebase configuration
 //   var firebaseConfig = {
@@ -26,9 +24,9 @@ var firebaseConfig = {
   };
 
 
-  // Initialize Firebase
+//   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.auth().languageCode = 'es';
+//   firebase.auth().languageCode = 'es';
 
 
 //elementos del dom  
