@@ -146,6 +146,12 @@
  }
  #modalFooter{
      display: block;
+     overflow: scroll;
+ }
+ /* #modalFooter::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    } */
  }
  #cuerpoModal{
      padding: 0;
@@ -166,6 +172,13 @@
      margin: 0 !important;
  }
  #modalContent {
-    height: 100vh !important;
+    height: 90vh !important;
     overflow: auto;
+    position: relative;
+ }
+ #btnClose{
+     position: fixed;
+     right: 182px;
+     z-index: 20;
+     top: 38px;
  }
