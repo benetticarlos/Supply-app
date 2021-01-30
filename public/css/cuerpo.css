@@ -182,3 +182,17 @@
      z-index: 20;
      top: 11px;
  }
+
+ /* //carusel */
+
+
+ #containerCarrousel{
+     height: 316px;
+ }
+ #containerCarrousel .carrusel,
+ #containerCarrousel .carrusel #carouselExampleSlidesOnly,
+ #containerCarrousel .carrusel #carouselExampleSlidesOnly .carousel-inner
+  {
+     height: 100%;
+
+ }
