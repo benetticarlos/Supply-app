@@ -109,17 +109,24 @@
     background-color: #393E46;
     width: 30vw;
     height: auto;
+    padding: 2em;
+    color: beige;
 }
 
 .busquedas {
     background-color: #222831;
     width: -webkit-fill-available;
     height: auto;
+    padding: 2em;
 }
 
 
+/* //cuerpo] */
 
 
+.menuBusqueda{
+    color: beige;
+}
  /* //tarjetas */
 
  #imgTarjeta {
@@ -188,6 +195,7 @@
 
  #containerCarrousel{
      height: 316px;
+     position: relative;
  }
  #containerCarrousel .carrusel,
  #containerCarrousel .carrusel #carouselExampleSlidesOnly,
@@ -195,4 +203,10 @@
   {
      height: 100%;
 
+ }
+ #botonPublicar{
+     position: absolute;
+     right: 22px;
+     top: 9px;
+     z-index: 2000;
  }
