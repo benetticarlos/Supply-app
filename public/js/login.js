@@ -5,14 +5,14 @@
 //   correo = document.getElementById("correo").value;
 // }
 
-function crearCuenta() {
-    registrarse.style.display="block"
-    registrarse.style.transition="all .5s ease"
-}
+// function crearCuenta() {
+//     registrarse.style.display="block"
+//     registrarse.style.transition="all .5s ease"
+// }
 
-let registrarse = document.getElementById("crear-cuenta")
-let btn = document.getElementById("toggle")
-btn.addEventListener('click', crearCuenta)
+// let registrarse = document.getElementById("crear-cuenta")
+// let btn = document.getElementById("toggle")
+// btn.addEventListener('click', crearCuenta)
 
 
 
@@ -152,3 +152,4 @@ const verificarEmailContrasena = (errorCode, errorMessage, email)=>{
     }
 
 }
+
