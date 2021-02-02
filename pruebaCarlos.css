@@ -16,12 +16,12 @@
     text-decoration: none;
   }
   
-  body {
-    margin: 30px 0;
-    font: 22px sans-serif;
-    background: var(--body-bg-color);
+  /* body {
+    margin: 30px 0; */
+    /* font: 22px sans-serif; */
+    /* background: var(--body-bg-color);
     color: var(--text-color);
-  }
+  } */
   
   hr {
     border-color: var(--hr-color);
@@ -31,6 +31,10 @@
   .menu {
     display: flex;
     justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5.313rem;
   }
   
   .menu li {

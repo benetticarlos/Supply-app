@@ -63,14 +63,6 @@ module.exports = {
                     agregarPublicacion,
                     borrarPublicacion,
                     editarPublicacion
-<<<<<<< HEAD
                 }
 
 
-
-
-
-              
-=======
-                }
->>>>>>> c43d68b9671ddaaa12407bc384cbb018e5d3d2e6
