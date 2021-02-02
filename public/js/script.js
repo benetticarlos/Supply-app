@@ -35,28 +35,26 @@ const tarjetasBusquedas = [
 ]
 
 
-
-
 //rellenando tarjetas
 const containerTarjeta = document.querySelector("#containerTarjeta")
 
-tarjetasBusquedas.forEach((elemento, indicea, array)=>{
-  console.log(elemento.img)
-  containerTarjeta.innerHTML += `
-  <div  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  <div id="unaTrajeta" class="card">
-    <img id="imgTarjeta" src=${elemento.img} class="card-img-top" alt="...">
-    <div id="cuerpoTrajeta" class="card-body">
-      <h5 class="card-title">${elemento.publicacion}</h5>
-      <p class="card-text">
-        ${elemento.detalle}
-      </p>
+// tarjetasBusquedas.forEach((elemento, indicea, array)=>{
+//   console.log(elemento.img)
+//   containerTarjeta.innerHTML += `
+//   <div  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+//   <div id="unaTrajeta" class="card">
+//     <img id="imgTarjeta" src=${elemento.img} class="card-img-top" alt="...">
+//     <div id="cuerpoTrajeta" class="card-body">
+//       <h5 class="card-title">${elemento.publicacion}</h5>
+//       <p class="card-text">
+//         ${elemento.detalle}
+//       </p>
       
-    </div>
-  </div>
-</div>
-  `
-})
+//     </div>
+//   </div>
+// </div>
+//   `
+// })
 
 
 //direccionar una pagina
@@ -65,4 +63,32 @@ const direccionarA = (htmlNombre)=>{
   window.location.href='../'+htmlNombre
 }
 
+// var miDato = [{}]
+fetch('http://localhost:8080')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+    data.forEach(elemento => {
+      console.log(elemento.id)
+      console.log(elemento.detalle)
+      containerTarjeta.innerHTML += `
+        <div  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div id="unaTrajeta" class="card">
+          <img id="imgTarjeta" src=${elemento.imgenurl} class="card-img-top" alt="...">
+          <div id="cuerpoTrajeta" class="card-body">
+            <h5 class="card-title">${elemento.publicacion}</h5>
+            <p class="card-text">
+              ${elemento.detalle}
+            </p>
+            
+          </div>
+        </div>
+      </div>
+        `
 
+
+
+    })
+    // return data
+  });
+  
