@@ -33,7 +33,7 @@ const linkBotonPublicar = document.querySelector("#linkBotonPublicar")
 ///
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    alert(".....")
+    // alert(".....")
     verificacionLogin()
     // El usuario está logueado, realiza acciones aquí
   } else {
