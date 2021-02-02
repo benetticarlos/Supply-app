@@ -1,5 +1,11 @@
 
 
+// firebase.auth().signOut().then(() => {
+//   // Sign-out successful.
+// }).catch((error) => {
+//   // An error happened.
+// });
+
 
 //base prueba
 // Your web app's Firebase configuration
@@ -21,8 +27,21 @@ var firebaseConfig = {
 //configuracion de la pantalla cuerpo
 //elementos del dom
 const botonPerfil = document.querySelector("#botonPerfil")
+const linkBotonPublicar = document.querySelector("#linkBotonPublicar")
 
 
+///
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    alert(".....")
+    verificacionLogin()
+    // El usuario está logueado, realiza acciones aquí
+  } else {
+       console.log("usuario nullo");
+       
+  }
+
+})
 
 
 const verificacionLogin = ()=>{
@@ -36,12 +55,14 @@ const verificacionLogin = ()=>{
       photoUrl = user.photoURL;
       emailVerified = user.emailVerified;
       uid = user.uid;  
-      
+
       console.log(`El susuario ${email} esta logueado`)
       botonPerfil.style.display = "true" 
+      linkBotonPublicar.href = "./publicarBusqueda.html"  
     }else{  
-      botonPerfil.style.display = "none"  
-      console.log("Error al loguear ususario")
+      botonPerfil.style.display = "none"
+      linkBotonPublicar.href = "./login.html"  
+      console.log(`Error al loguear ususario ${email}, f verificacionLogin()`)
     }
   }
-  verificacionLogin()
+  

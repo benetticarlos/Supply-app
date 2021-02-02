@@ -51,14 +51,16 @@
             <h2>Login de Usuarios</h2>
             <div class="col-auto">
                 <label for="staticEmail2" class="visually-hidden">Email</label>
-                <input type="text" class="form-control-plaintext" id="staticEmail2" value="email@example.com" placeholder="Elformato del email debe ser correcto">
+                <input type="text" class="form-control-plaintext" id="emailFormularioLogin" value="email@example.com" placeholder="Elformato del email debe ser correcto">
               </div>
               <div class="col-auto">
                 <label for="inputPassword2" class="visually-hidden">Password</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password" placeholder="La contraseña no debe ser inferior a 6 caracteres">
+                <input type="password" class="form-control" id="passwordFormularioLogin" placeholder="Password" placeholder="La contraseña no debe ser inferior a 6 caracteres">
               </div>
               <div class="col-auto">
-                <button type="submit" id="botonDeRegistro" class="btn btn-primary mb-3">Login</button>
+                <!-- <a id="linkBotonLogin" href="./cuerpo.html"> -->
+                  <button type="submit" id="botonDeLogin" class="btn btn-primary mb-3"><a id="linkBotonLogin" >Login</a></button>
+                <!-- </a> -->
               </div>
             </form>
     </div>
@@ -71,7 +73,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     <!-- <script src="../controllers/loginControllers.js"></script> -->
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
     <script src="./js/login.js"></script>
 <!-- <script>
     // Your web app's Firebase configuration
