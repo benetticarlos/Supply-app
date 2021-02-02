@@ -68,13 +68,147 @@ const conexion_db = require('../config/dbConfig')
 
 
 
+const obtenerPublicacion = (req, res)=>{
+    conexion_db.query('select * from publicacion_t', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
 
-                const obtenerPublicacionServicios = (req, res)=>{
-                    conexion_db.query('select * ingresarServicio_t', (err, result)=>{
-                        if(err){
-                            throw err
+const agregarPublicacion = (req, res)=>{
+   console.log(req.body)
+   const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario} = req.body
+    conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`) VALUES (?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario],(err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+            }
+        })
+        res.send("alta exitosa")
+}
+
+const borrarPublicacion = (req, res) => {
+    const {id} = req.body
+    conexion_db.query('DELETE FROM `publicacion_t` WHERE id = ?',[id] ,(err, result) =>{
+if(err){
+    throw err
+}else{
+    console.log(result)
+    res.send('elemento borrado')
+}
+    })
+    console.log('elemento borrado')
+}
+
+const editarPublicacion = (req, res) =>{
+    const {id, publicacion, detalle} = req.body
+    conexion_db.query('UPDATE `publicacion_t` SET `publicacion`=?,`detalle`=? WHERE id = ?',[publicacion, detalle, id],(err, result) =>{
+        if(err){
+            throw err
+        }else{
+            console.log(result)
+            res.send('elemento editado')
+        }
+            })
+            console.log('elemento editado')
+        }
+
+
+
+  
+module.exports = {
+                    obtenerPublicacion,
+                    agregarPublicacion,
+                    borrarPublicacion,
+                    editarPublicacion
+                }
+
+
+const obtenerPublicacion = (req, res)=>{
+    conexion_db.query('select * from publicacion_t', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
+
+const agregarPublicacion = (req, res)=>{
+   console.log(req.body)
+   const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario} = req.body
+    conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`) VALUES (?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario],(err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+            }
+        })
+        res.send("alta exitosa")
+}
+
+const borrarPublicacion = (req, res) => {
+    const {id} = req.body
+    conexion_db.query('DELETE FROM `publicacion_t` WHERE id = ?',[id] ,(err, result) =>{
+if(err){
+    throw err
+}else{
+    console.log(result)
+    res.send('elemento borrado')
+}
+    })
+    console.log('elemento borrado')
+}
+
+const editarPublicacion = (req, res) =>{
+    const {id, publicacion, detalle} = req.body
+    conexion_db.query('UPDATE `publicacion_t` SET `publicacion`=?,`detalle`=? WHERE id = ?',[publicacion, detalle, id],(err, result) =>{
+        if(err){
+            throw err
+        }else{
+            console.log(result)
+            res.send('elemento editado')
+        }
+            })
+            console.log('elemento editado')
+        }
+
+
+  
+module.exports = {
+                    obtenerPublicacion,
+                    agregarPublicacion,
+                    borrarPublicacion,
+                    editarPublicacion
+                }
+
+
+
+
+
+
+
+
+ const obtenerComentario = (req, res)=>{
+        conexion_db.query('select * from comentario_t', (err, result)=>{
+                 if(err){
+                 throw err
                         
-                        }else {           
+                 }else {           
                            
                                 console.log(result)
                                 res.send(result)
@@ -82,10 +216,10 @@ const conexion_db = require('../config/dbConfig')
                     })
                 }
                 
-                const agregarPublicacionServicios = (req, res)=>{
-                   console.log(req.body)
-                   const {id, publicacion, detalle} = req.body
-                    conexion_db.query('INSERT INTO `ingresarServicio_t`(`id`, `publicacion`, `detalle`) VALUES (?,?,?)', [id, publicacion, detalle],(err, result)=>{
+const agregarComentario = (req, res)=>{
+        console.log(req.body)
+        const {id, comentario, id_publicacion} = req.body
+        conexion_db.query('INSERT INTO `comentario_t`(`id`, `comentario`, id_publicacion`) VALUES (?,?,?)', [id, comentario, id_publicacion],(err, result)=>{
                         if(err){
                             throw err
                         
@@ -97,39 +231,38 @@ const conexion_db = require('../config/dbConfig')
                         res.send("alta exitosa")
                 }
                 
-                const borrarPublicacionServicios = (req, res) => {
-                    const {id} = req.body
-                    conexion_db.query('DELETE FROM `ingresarServicio_t` WHERE id = ?',[id] ,(err, result) =>{
-                if(err){
-                    throw err
-                }else{
-                    console.log(result)
-                    res.send('elemento borrado')
+ const borrarComentario = (req, res) => {
+        const {id} = req.body
+        conexion_db.query('DELETE FROM `comentario_t` WHERE id = ?',[id] ,(err, result) =>{
+        if(err){
+         throw err
+         }else{
+         console.log(result)
+         res.send('comentario borrado')
                 }
                     })
-                    console.log('elemento borrado')
+                    console.log('comentario borrado')
                 }
                 
-                const editarPublicacionServicio = (req, res) =>{
-                    const {id, publicacion, detalle} = req.body
-                    conexion_db.query('UPDATE `ingresarServicio_t` SET `publicacion`=?,`detalle`=? WHERE id = ?',[publicacion, detalle, id],(err, result) =>{
-                        if(err){
-                            throw err
-                        }else{
-                            console.log(result)
-                            res.send('elemento editado')
+     const editarComentario = (req, res) =>{
+        const {id, comentario, id_publicacion} = req.body
+         conexion_db.query('UPDATE `comentario_t` SET `comentario`=?,`detalle`=? WHERE id = ?',[id, comentario, id_publicacion],(err, result) =>{
+         if(err){
+         throw err
+           }else{
+           console.log(result)
+           res.send('elemento editado')
                         }
-                            })
-                            console.log('elemento editado')
-                        }
+                        })
+                      console.log('elemento editado')
+               }
                 
                 
                 
                   
-                module.exports = {
-                                    obtenerPublicacionServicios,
-                                    agregarPublicacionServicios,
-                                    borrarPublicacionServicios,
-                                    editarPublicacionServicios
+  module.exports = {
+                     obtenerComentario,
+                     agregarComentario,
+                     borrarComentario,
+                     editarComentario
                                 }
-
