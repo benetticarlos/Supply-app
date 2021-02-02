@@ -46,7 +46,7 @@
         
     margin: auto;
     margin-top: 7vh;
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
 
     }
 
@@ -58,4 +58,7 @@
     .boton-publicarBusqueda {
         width: fit-content;
         margin: auto;
+        margin-top: 6vh;
     }
+
+    
