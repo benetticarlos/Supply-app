@@ -1,0 +1,15 @@
+.AcercaDelUsuario {
+    width: 30%;
+}
+
+#descripcionUsuario {
+    border-radius: 10%;
+}
+
+.avatares {
+    display: flex;
+    /* width: fit-content; */
+    /* height: auto; */
+    /* box-sizing: border-box; */
+    width: 7vw;
+}

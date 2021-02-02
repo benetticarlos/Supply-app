@@ -59,3 +59,10 @@ tarjetasBusquedas.forEach((elemento, indicea, array)=>{
 })
 
 
+//direccionar una pagina
+
+const direccionarA = (htmlNombre)=>{
+  window.location.href='../'+htmlNombre
+}
+
+

@@ -5,14 +5,14 @@
 //   correo = document.getElementById("correo").value;
 // }
 
-function crearCuenta() {
-    registrarse.style.display="block"
-    registrarse.style.transition="all .5s ease"
-}
+// function crearCuenta() {
+//     registrarse.style.display="block"
+//     registrarse.style.transition="all .5s ease"
+// }
 
-let registrarse = document.getElementById("crear-cuenta")
-let btn = document.getElementById("toggle")
-btn.addEventListener('click', crearCuenta)
+// let registrarse = document.getElementById("crear-cuenta")
+// let btn = document.getElementById("toggle")
+// btn.addEventListener('click', crearCuenta)
 
 
 
@@ -51,14 +51,25 @@ var firebaseConfig = {
 
 
 
-//elementos del dom  
+//elementos del dom 
+//formulario de login y registro
+//formulario de registro 
 const botonDeRegistro = document.querySelector("#botonDeRegistro")
 const  campoEmail = document.querySelector("#staticEmail2")
 const  campoPassword = document.querySelector("#inputPassword2")
 
+//formulario de login
+const botonDeLogin = document.querySelector("#botonDeLogin")
+const  campoEmailLogin = document.querySelector("#emailFormularioLogin")
+const  campoPasswordLogin = document.querySelector("#passwordFormularioLogin")
 
+const linkBotonLogin = document.querySelector("#linkBotonLogin")
+
+//contenedores formulario
 const formularioRegistro = document.querySelector("#formularioRegistro")
 const formularioLogin = document.querySelector("#formularioLogin")
+
+
 
 //boton del navbar para iniciar sesion
 const btnIniciarSesion = document.querySelector("#btn-iniciarSesion")
@@ -89,16 +100,20 @@ botonDeRegistro.addEventListener("click",(e)=>{
     
     // console.log(campoEmail.value,campoPassword.value)
     registroUsuario(campoEmail.value, campoPassword.value)
-    // logueoUsuario(campoEmail.value, campoPassword.value)
+  })
+  
+  botonDeLogin.addEventListener("click",(e)=>{
+    e.preventDefault()
+    logueoUsuario(campoEmailLogin.value, campoPasswordLogin.value)    
 
-    
 })
 
 //funciones
   const registroUsuario = (email,password) => {
+    alert("antes del logueo de usuario")
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((user) => {
-      console.log(`El susuario ${email} se registro con exito`)
+      console.log(`El susuario ${email} se registro con exito,f registroUsuario()`)
       escucharCambioUsuario()
       
     })
@@ -110,11 +125,14 @@ botonDeRegistro.addEventListener("click",(e)=>{
       
       // ..
     });}
+
 const logueoUsuario = (email,password) => {
-    firebase.auth().signInWithEmailAndPassword(email, password)
+  firebase.auth().signInWithEmailAndPassword(email, password)  
   .then((user) => {
-    // Signed in
-    // ...
+    console.log("El usuario se logueo con exito, funcion logueoUsuario()")
+    escucharCambioUsuario()
+        // linkBotonLogin.href = "./cuerpo.html"
+        location.href = "http://localhost:8080/cuerpo.html"   
   })
   .catch((error) => {
     var errorCode = error.code;
@@ -132,14 +150,18 @@ const escucharCambioUsuario = ()=>{
     email = user.email;
     photoUrl = user.photoURL;
     emailVerified = user.emailVerified;
-    uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                    // this value to authenticate with your backend server, if
-                    // you have one. Use User.getToken() instead.
-    console.log(`El susuario ${email} esta logueado`)
+    uid = user.uid;  
+
+    console.log(`El usuario ${email} esta logueado, f escuchaCambioUsuario()`)
+    
+    // linkBotonLogin.href = "./cuerpo.html"
+
   }else{  
-    console.log("Error al loguear ususario")
+    console.log("Error al loguear ususario, f escuchaCambioUsuario()")
   }
 }
+
+//controles de email y contraseña
 const verificarEmailContrasena = (errorCode, errorMessage, email)=>{
     if("auth/email-already-in-use" == errorCode){
         alert(`El correo ${email} ya posee cuenta, codigo de error: ${errorMessage}`)
@@ -152,3 +174,4 @@ const verificarEmailContrasena = (errorCode, errorMessage, email)=>{
     }
 
 }
+

@@ -73,7 +73,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand contenedor-navbar" href="#">
-                <div>
+                <div  onclick="window.location.href='cuerpo.html'">
 
                     <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
                     <span class="nombre-app">
@@ -102,7 +102,7 @@
         </div>
     </nav>
 
-    <div class="container" style="display: flex;">
+    <div class="container" style="display: flex; height: 89vh;">
         <section class="form-productos">
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="labelForm form-label">¡Qué estás buscando?</label>
@@ -157,7 +157,13 @@
 
                 <div class="imagen-opcional">
                     <img src="./images/iconoDescarga.svg" alt="" class="iconoDescarga">
+
+            
                 </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
 
                 <div class="boton-publicarBusqueda">
                     <button type="button" class="btn-buscar btn btn-secondary" style="width: fit-content;">Publicar busqueda</button>

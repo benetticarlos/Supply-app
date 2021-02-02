@@ -18,6 +18,11 @@
 
 }
 
+.d-inline-block {
+    width: auto;
+    height: 7vh;
+}
+
 .contenedor-navbar {
     width: 100%;
     display: flex;
@@ -80,13 +85,17 @@
 .nombre-app {
     color: var(--oscuro);
     font-weight: bold;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    font-size: x-large;
 }
 #imagenNavbar{
     width: 40px;
     height: 40px;
 }
 
+#barraBusqueda{
+    max-width: 465px;
+}
 
 
 
@@ -126,6 +135,14 @@
 
 .menuBusqueda{
     color: beige;
+    text-decoration: none;
+}
+
+.menuBusqueda h3 {
+    width: fit-content;
+    margin: auto;
+    font-size: xxx-large;
+    margin-bottom: 2vh;
 }
  /* //tarjetas */
 
@@ -209,4 +226,26 @@
      right: 22px;
      top: 9px;
      z-index: 2000;
+
+    font-size: 1.5rem;
+    width: 160px;
+    border-radius: 10px;
+    
+
+    background-color: var(--celeste);
+    color: var(--oscuro);
+    border-color: var(--oscuro);
+    
+    border-width: 3px;
+
+    font-weight: bold;
  }
+    #botonPublicar:hover {
+    border-color: var(--oscuro);
+    color:var(--gris);
+    border-width: 3px;
+    /* background-color: var(--gris); */
+    background-color: var(--oscuro);
+    font-weight: bold;
+
+}

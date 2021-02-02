@@ -6,6 +6,8 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cuerpo.css">
+    <link rel="stylesheet" href="./css/animacionCuerpo.css">
+    
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -21,16 +23,16 @@
                 </div>
                 <div class="container-fluid">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                       <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
                 <div class="contenedor-registro">
-                    <button type="button" class="btn-navbar btn ">Categorias</button>
-                    <button type="button" class="btn-navbar btn ">Favoritos</button>
+                    <button type="button" class="btn-navbar btn ">Iniciar Sesion</button>
+                    <button type="button" class="btn-navbar btn ">Registrase</button>
                 </div>
                 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button id="botonPerfil" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </a>
@@ -39,7 +41,7 @@
     </nav>
     <!-- inicio carrusel -->
     <div id="containerCarrousel" class="container-carrousel">
-      <button id="botonPublicar" type="button" class="btn-navbar btn ">Publicar</button>
+      <a id="linkBotonPublicar" href="./publicarBusqueda.html"> <button type="button" id="botonPublicar" class="btn btn-secondary" style="width: fit-content; ">Busco un producto</button></a>
       <div class="carrusel" style="height: auto;">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -70,98 +72,47 @@
             
             <div class="busquedas">
                 <div class="menuBusqueda">
-                    <h3>Busquedas</h3>
+                    <h3>Busquedas publicadas</h3>
     
-            <a href="#">Todos</a>
-            <a href="#">Productos</a>
-            <a href="#">Servicios</a>
+                    <ul class="menu" data-animation="diagonal">
+                      <li>
+                        <a href="#0" style="    font-size: x-large;
+                        font-weight: bolder;">
+                          Todos
+                          <span class="border border-top"></span>
+                          <span class="border border-right"></span>
+                          <span class="border border-bottom"></span>
+                          <span class="border border-left"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#0" style="    font-size: x-large;
+                        font-weight: bolder;">
+                          Productos
+                          <span class="border border-top"></span>
+                          <span class="border border-right"></span>
+                          <span class="border border-bottom"></span>
+                          <span class="border border-left"></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#0" style="    font-size: x-large;
+                        font-weight: bolder;">
+                          Servicios
+                          <span class="border border-top"></span>
+                          <span class="border border-right"></span>
+                          <span class="border border-bottom"></span>
+                          <span class="border border-left"></span>
+                        </a>
+                      </li>
+                  </ul>
                 </div>
     
                 <div class="busquedasPublicadas">
                     <!--inicio tarjeta-->
                     <div id="containerTarjeta" class="row row-cols-1 row-cols-md-3 g-4">
-
-                        <!-- <div  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          <div id="unaTrajeta" class="card">
-                            <img id="imgTarjeta" src="./images/bolsitas.jpg" class="card-img-top" alt="...">
-                            <div id="cuerpoTrajeta" class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              
-                            </div>
-                          </div>
-                        </div>
-                         -->
+                      <!-- rellena con javascript -->
+               
                     </div>
                       <!--fin tarjeta-->
                 </div>
@@ -170,7 +121,7 @@
           
         </div>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
 <!-- inicio del modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div id="miModal" class="modal-dialog ">
@@ -254,7 +205,12 @@
     </div>
   </div>
 <!-- fin del modal -->
+<!-- //The core Firebase JS SDK is always required and must be listed first --> -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/cuerpo.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
