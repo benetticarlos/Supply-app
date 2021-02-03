@@ -68,27 +68,25 @@ fetch('http://localhost:8080')
   .then(response => response.json())
   .then(data => {
     console.log(data)
+    // console.log(data[0].imagenurl)
+
     data.forEach(elemento => {
       console.log(elemento.id)
       console.log(elemento.detalle)
       containerTarjeta.innerHTML += `
         <div  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">
-          <img id="imgTarjeta" src=${elemento.imgenurl} class="card-img-top" alt="...">
+          <img id="imgTarjeta" src=${elemento.imagenurl} class="card-img-top" alt="...">
           <div id="cuerpoTrajeta" class="card-body">
             <h5 class="card-title">${elemento.publicacion}</h5>
             <p class="card-text">
               ${elemento.detalle}
-            </p>
-            
+            </p>            
           </div>
         </div>
       </div>
         `
-
-
-
     })
-    // return data
+    
   });
   
