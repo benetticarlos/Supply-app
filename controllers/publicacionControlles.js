@@ -60,6 +60,17 @@ const editarPublicacion = (req, res) =>{
 
 
 
+<<<<<<< HEAD
+  
+module.exports = {
+                    obtenerPublicacion,
+                    agregarPublicacion,
+                    borrarPublicacion,
+                    editarPublicacion
+                }
+
+
+=======
 
 
 
@@ -129,3 +140,4 @@ module.exports = {
                  editarComentario
             }
   
+>>>>>>> 8ce32a91caac8cfc68f6e9019e83a22ec0fd99e8
