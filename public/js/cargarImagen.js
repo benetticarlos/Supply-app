@@ -1,3 +1,4 @@
+          //carlos
           // Your web app's Firebase configuration
           var firebaseConfig = {
             apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
@@ -31,22 +32,4 @@ upload.addEventListener('change', function (e) {
 
 
 
-// window.onload = inicializar
-
-// var upload;
-// // var storageRef
-
-// function inicializar() {
-//     upload = document.getElementById('upload')
-//     upload.addEventListener("change", subirImagenAFirebase, false)
-
-
-//     var storageRef = firebase.storage().ref();
-// }
-
-// function subirImagenAFirebase() {
-//     var imagenASubir = upload.files[0];
-
-//     var uploadTask = storageRef.put(imagenASubir)
-
-// }
+/
