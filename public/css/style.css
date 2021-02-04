@@ -127,7 +127,8 @@
     height: auto;
 }
 /* estilos de login */
-#staticEmail2{
+#staticEmail2,
+#emailFormularioLogin{
     background-color: #eeeeee;
     color:black;
     border-radius: 5px;
@@ -153,7 +154,7 @@ h2{
 #btn-iniciarSesion{
     display: none;
 }
-publicarBusqueda
+/* publicarBusqueda */
 
 .titulo-busqueda {
     box-sizing: border-box;

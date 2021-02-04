@@ -111,3 +111,13 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+INSERT INTO `comentario_t` (`id`, `comentario`, `id_publicacion`)
+VALUES
+(1, 'buenas tardes quiero saber donde conseguir el producto', 'marta'),
+(2, 'buen día quiero saber donde conseguir el producto', 'pepe');
+
+INSERT INTO `publicacion_t`(`id`,`publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `id_usuario`)
+VALUES 
+(1, 'busco papas', 'necesito comprar papas grandes blancas', '20,50', 'Las Heras', '', '', 'nuevas', '')
