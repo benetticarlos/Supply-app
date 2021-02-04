@@ -26,5 +26,3 @@ app.put('/editar', publicacion_controlles.editarPublicacion)
 app.listen(port,()=>{
     console.log('Escuchando puerto', port)
 })
-
-

@@ -118,6 +118,6 @@ VALUES
 (1, 'buenas tardes quiero saber donde conseguir el producto', 'marta'),
 (2, 'buen día quiero saber donde conseguir el producto', 'pepe');
 
-INSERT INTO `publicacion_t`(`id`,`publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `id_usuario`)
+INSERT INTO `publicacion_t`(`id`,`publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`)
 VALUES 
 (1, 'busco papas', 'necesito comprar papas grandes blancas', '20,50', 'Las Heras', '', '', 'nuevas', '')
