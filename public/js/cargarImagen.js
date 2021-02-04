@@ -32,4 +32,3 @@ upload.addEventListener('change', function (e) {
 
 
 
-/
