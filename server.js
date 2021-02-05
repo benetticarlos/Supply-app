@@ -10,8 +10,10 @@ app.use(express.static('public'))
 
 //get post put delete
 app.get('/', publicacion_controlles.obtenerPublicacion)
+//para obseter el ultimo id cargado
+app.get('/ultimoId', publicacion_controlles.obtenerIdUltimaPublicacion)
 
-app.post('/publicacion', publicacion_controlles.agregarPublicacion)
+app.post('/ingresarproducto', publicacion_controlles.agregarPublicacion)
 
 app.delete('/borrar', publicacion_controlles.borrarPublicacion)
 
