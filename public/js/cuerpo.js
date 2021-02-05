@@ -1,4 +1,9 @@
-
+<<<<<<< HEAD
+const cargando = document.querySelector("#cargando") 
+=======
+// capturando pagina de carga
+const cargando = document.querySelector("#cargado")
+>>>>>>> 6a84e38d7c39ef0228ec860b1b954764fc55f4a3
 
 // firebase.auth().signOut().then(() => {
 //   // Sign-out successful.
@@ -35,7 +40,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // alert(".....")
     verificacionLogin()
+    cargando.style.display = "none!important"
     // El usuario está logueado, realiza acciones aquí
+    cargando.style.display="none"
   } else {
        console.log("usuario nullo");
        
