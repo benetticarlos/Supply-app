@@ -1,5 +1,8 @@
+const { response } = require('express')
 const express = require('express')
+const { request } = require('http')
 const app = express()
+const path = require('path')
 
 const publicacion_controlles = require('./controllers/publicacionControlles')
 
@@ -20,7 +23,9 @@ app.delete('/borrar', publicacion_controlles.borrarPublicacion)
 app.put('/editar', publicacion_controlles.editarPublicacion)
 
 
-
+app.get('/ingresarproducto', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'ingresarproducto.html'))
+})
 
 
 
