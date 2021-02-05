@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-const cargando = document.querySelector("#cargando") 
-=======
 // capturando pagina de carga
 const cargando = document.querySelector("#cargado")
->>>>>>> 6a84e38d7c39ef0228ec860b1b954764fc55f4a3
-
-// firebase.auth().signOut().then(() => {
-//   // Sign-out successful.
-// }).catch((error) => {
-//   // An error happened.
-// });
 
 
-//base prueba
+
+
+//base martin
 // Your web app's Firebase configuration
 
 var firebaseConfig = {
@@ -73,3 +65,11 @@ const verificacionLogin = ()=>{
     }
   }
   
+const cerrarSesion = ()=>{
+  firebase.auth().signOut().then(() => {
+    console.log("usuario deslogueado con exito")
+  }).catch((error) => {
+    // An error happened.
+    console.log("deslogueo de usuario con erro: ", error)
+  });
+}
