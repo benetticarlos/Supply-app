@@ -73,6 +73,7 @@ fetch('http://localhost:8080')
     data.forEach(elemento => {
       console.log(elemento.id)
       console.log(elemento.detalle)
+      console.log("esta es la imagen ", elemento.imagenurl);
       containerTarjeta.innerHTML += `
         <div  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">

@@ -46,9 +46,13 @@
 
     <div class="container" style="display: flex; height: 89vh;">
         <section class="form-productos">
+
+            <form action="" id="formularioServicio">
+
+            
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="labelForm form-label">¡Qué estás buscando?</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput" placeholder="Indicá que servicio necesitas">
+                <input type="text" class="controlForm form-control" id="publicacion" placeholder="Indicá que servicio necesitas">
               </div>
               <div class="mb-3">
                 <label for="formGroupExampleInput2" class="labelForm form-label">Rubro</label>
@@ -90,7 +94,7 @@
             
             <div class="mb-3" style="width: 100%;">
                 <label for="formGroupExampleInput2" class="labelForm form-label">¿Qué precio estás dispuesto a pagar?</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput2" placeholder="pesos por hora">
+                <input type="text" class="controlForm form-control" id="precio" placeholder="pesos por hora">
             
             
             
@@ -105,7 +109,7 @@
 
               <div class="mb-3">
                 <label for="formGroupExampleInput2" class="labelForm form-label">Zona</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput2" placeholder="Ciudad o región">
+                <input type="text" class="controlForm form-control" id="zona" placeholder="Ciudad o región">
             </div>
         </section>
 
@@ -114,12 +118,18 @@
             <h4>Agregá una imagen (opcional)</h4>
 
             <div class="imagen-opcional" >
-                <input class="form-control" type="file" id="formFile" hidden>
-                <label for="formFile" class="form-label" id="IngresarImagenBoton" style="
+                <div class="imagenSRC">
+                    <img src="" class="img-fluid" id="pruebasrc" alt="">
+
+                </div>
+                
+                <input class="form-control" name="imagenurl" type="file" value="imagenurl"id="imagenurl" hidden>
+                <label for="imagenurl" class="form-label" id="IngresarImagenBoton" style="
                 width: 100%;
+                display: contents;
             ">
 
-                    <img src="./images/iconoDescarga.svg" alt="" class="iconoDescarga" style="
+                    <img src="./images/iconoDescarga.svg" alt=""  id="iconoDescarga" class="iconoDescarga" style="
                     /* box-sizing: border-box; */
                     margin-left: 2.4vw;
                     margin-top: 4vh;
@@ -130,34 +140,35 @@
             </div>
 
                 <div class="boton-publicarBusqueda">
-                    <button type="button" class="btn-buscar btn btn-secondary" style="width: fit-content;">Publicar busqueda</button>
+                    <button id="botonPublicarBusqueda" type="submit" class="btn-buscar btn btn-secondary" style="width: fit-content;">Publicar busqueda</button>
                 </div>
+            </form>
         </div>
     </div>
 
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script> -->
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
+    <script>
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
-    authDomain: "localstorage-e6721.firebaseapp.com",
-    projectId: "localstorage-e6721",
-    storageBucket: "localstorage-e6721.appspot.com",
-    messagingSenderId: "719797837765",
-    appId: "1:719797837765:web:6cf7cce3a249d07edbf5ac"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+//   var firebaseConfig = {
+//     apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
+//     authDomain: "localstorage-e6721.firebaseapp.com",
+//     projectId: "localstorage-e6721",
+//     storageBucket: "localstorage-e6721.appspot.com",
+//     messagingSenderId: "719797837765",
+//     appId: "1:719797837765:web:6cf7cce3a249d07edbf5ac"
+//   };
+//   // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+// </script>
 
-<script src="./js/cargarImagen.js"></script>
+<script src="./js/cargarServicio.js"></script>
     
 </body>
 </html>

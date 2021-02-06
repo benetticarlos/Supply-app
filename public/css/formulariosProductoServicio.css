@@ -51,6 +51,22 @@
     
     }
 
+    .imagensrc {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+#pruebasrc{
+    position: relative;
+    
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+
+}
+
+
     #ingresarImagenBoton {
         width: 100%;
         display: flex;
