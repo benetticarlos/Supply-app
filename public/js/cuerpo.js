@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 const cargando = document.querySelector("#cargando") 
-=======
-// capturando pagina de carga
-const cargando = document.querySelector("#cargado")
->>>>>>> 6a84e38d7c39ef0228ec860b1b954764fc55f4a3
 
 // firebase.auth().signOut().then(() => {
 //   // Sign-out successful.
@@ -73,3 +68,10 @@ const verificacionLogin = ()=>{
     }
   }
   
+  // función desaparecer boton al no estar logueado
+  // $(function(){
+  //   $('#login').off().on('#botonPublicar',function(event){
+  //     event.preventDefault();
+  //     $('#login').hide();
+  //   });
+  // })

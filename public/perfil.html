@@ -14,10 +14,11 @@
 
 <body>
 
+   
     <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid" id="contenedor-completo">
             <a class="navbar-brand contenedor-navbar" href="#">
-                <div onclick="window.location.href='cuerpo.html'">
+                <div>
 
                     <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
                     <span class="nombre-app">
@@ -27,23 +28,26 @@
                 </div>
                 <div class="container-fluid">
                     <form class="d-flex">
-                        <input class="controlForm form-control me-2" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
-                <div class="contenedor-registro">
-                    <button type="button" class="btn-navbar btn ">Categorias</button>
-                    <button type="button" class="btn-navbar btn ">Favoritos</button>
-                </div>
+                <!-- <div class="contenedor-registro"> -->
+                     <!-- <button type="button" class="btn-navbar btn"> <a href="login.html">Ingresar/Registrarse</a>
+                    </button> -->
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+                    <div class="contenedor-registro">
+                      <button type="button" class="btn-navbar btn">
+                        <a href="login.html">
+                        ingresar/Registrarse</a></button>
+
+                  </div>
+  
+                
+                <button type="button" class="btn btn-outline-secondary">D</button>
             </a>
-
+            
         </div>
     </nav>
 
@@ -61,7 +65,7 @@
             <div class="mb-3" style="width: 100%;">
                 <label for="formGroupExampleInput2" class="labelForm form-label">email</label>
                 <input type="text" class="controlForm form-control" id="formGroupExampleInput2"
-                    placeholder="pesos por hora">
+                    placeholder="dirección e.mail">
 
 
 
@@ -72,9 +76,9 @@
 
 
             <div class="mb-3">
-                <label for="formGroupExampleInput2" class="labelForm form-label">Telefono (opcional)</label>
+                <label for="formGroupExampleInput2" class="labelForm form-label">Teléfono (opcional)</label>
                 <input type="text" class="controlForm form-control" id="formGroupExampleInput2"
-                    placeholder="Ciudad o región">
+                    placeholder="Introduzca un número">
             </div>
 
             <div class="mb-3" style="width: 100%;">
