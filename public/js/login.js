@@ -75,7 +75,9 @@ const formularioLogin = document.querySelector("#formularioLogin")
 const btnIniciarSesion = document.querySelector("#btn-iniciarSesion")
 const btnRegistro = document.querySelector("#btn-Registrar")
 
+//mensaje de error a mostrar
 
+const sapanMensajeError = document.querySelector("#spanError")
 
 //manejando formularios de login y registro
 btnIniciarSesion.addEventListener("click", ()=>{
@@ -102,7 +104,7 @@ botonDeRegistro.addEventListener("click",(e)=>{
     registroUsuario(campoEmail.value, campoPassword.value)
   })
   
-  botonDeLogin.addEventListener("click",(e)=>{
+botonDeLogin.addEventListener("click",(e)=>{
     e.preventDefault()
     logueoUsuario(campoEmailLogin.value, campoPasswordLogin.value)    
 
@@ -135,6 +137,7 @@ const logueoUsuario = (email,password) => {
         location.href = "http://localhost:8080/cuerpo.html"   
   })
   .catch((error) => {
+    console.log("usuarios no login, f logueousuario")
     var errorCode = error.code;
     var errorMessage = error.message;
     verificarEmailContrasena(errorCode, errorMessage, email)
@@ -163,15 +166,27 @@ const escucharCambioUsuario = ()=>{
 
 //controles de email y contraseña
 const verificarEmailContrasena = (errorCode, errorMessage, email)=>{
-    if("auth/email-already-in-use" == errorCode){
-        alert(`El correo ${email} ya posee cuenta, codigo de error: ${errorMessage}`)
+  let mensajeError = ""  
+  if("auth/email-already-in-use" == errorCode){
+    mensajeError=`El correo ${email} ya posee cuenta, codigo de error: ${errorMessage}`
       }
     if("auth/weak-password" == errorCode){
-        alert(`Verifique contraseña ingresada, codigo de error: ${errorMessage}`)
+      mensajeError=`Verifique contraseña ingresada, codigo de error: ${errorMessage}`
     }
     if("auth/invalid-email" == errorCode){
-        alert(`Verifique Email ingresado, codigo de error: ${errorMessage}`)
+      mensajeError=`Verifique Email ingresado, codigo de error: ${errorMessage}`
     }
+    if("auth/wrong-password" == errorCode){
+      mensajeError=`Verifique contraseña ingresada, codigo de error: ${errorMessage}`
+    }
+    if("auth/user-not-found" == errorCode){
+      mensajeError=`Usuario o contraseña incorrecta, codigo de error: ${errorMessage}`
+    }
+    console.log("entro en verificacion", errorCode)
+    console.log("mensaje error", mensajeError)
+    sapanMensajeError.innerHTML = `${mensajeError}`
+    setTimeout(function(){ sapanMensajeError.innerHTML = ``; }, 4000);
+
 
 }
 

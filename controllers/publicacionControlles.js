@@ -32,7 +32,7 @@ const obtenerIdUltimaPublicacion = (req, res)=>{
 }
 
 const agregarPublicacion = (req, res)=>{
-   console.log(req.body)
+   console.log("este es el rec body :", req.body)
    const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario} = req.body
     conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`) VALUES (?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario],(err, result)=>{
         if(err){
