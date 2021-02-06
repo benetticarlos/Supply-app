@@ -17,6 +17,20 @@ const obtenerPublicacion = (req, res)=>{
     })
 }
 
+const obtenerIdUltimaPublicacion = (req, res)=>{
+    
+    conexion_db.query('select max(id) as UId from publicacion_t', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
+
 const agregarPublicacion = (req, res)=>{
    console.log(req.body)
    const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario} = req.body
@@ -126,6 +140,7 @@ module.exports = {
                 obtenerComentario,
                  agregarComentario,
                  borrarComentario,
-                 editarComentario
+                 editarComentario,
+                 obtenerIdUltimaPublicacion
             }
   

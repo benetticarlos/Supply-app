@@ -1,13 +1,14 @@
+<<<<<<< HEAD
 const cargando = document.querySelector("#cargando") 
-
-// firebase.auth().signOut().then(() => {
-//   // Sign-out successful.
-// }).catch((error) => {
-//   // An error happened.
-// });
+=======
+// capturando pagina de carga
+const cargando = document.querySelector("#cargado")
+>>>>>>> 0b8dc1120e19c1f2a78a5a0985946271fe4d2a5e
 
 
-//base prueba
+
+
+//base martin
 // Your web app's Firebase configuration
 
 var firebaseConfig = {
@@ -68,6 +69,7 @@ const verificacionLogin = ()=>{
     }
   }
   
+<<<<<<< HEAD
   // función desaparecer boton al no estar logueado
   // $(function(){
   //   $('#login').off().on('#botonPublicar',function(event){
@@ -75,3 +77,13 @@ const verificacionLogin = ()=>{
   //     $('#login').hide();
   //   });
   // })
+=======
+const cerrarSesion = ()=>{
+  firebase.auth().signOut().then(() => {
+    console.log("usuario deslogueado con exito")
+  }).catch((error) => {
+    // An error happened.
+    console.log("deslogueo de usuario con erro: ", error)
+  });
+}
+>>>>>>> 0b8dc1120e19c1f2a78a5a0985946271fe4d2a5e
