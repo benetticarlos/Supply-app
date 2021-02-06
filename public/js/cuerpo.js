@@ -1,4 +1,10 @@
 
+// const cargando = document.querySelector("#cargando") 
+
+// // capturando pagina de carga
+// const cargando = document.querySelector("#cargado")
+
+
 //base martin
 // Your web app's Firebase configuration
 
@@ -19,7 +25,7 @@ var firebaseConfig = {
 //configuracion de la pantalla cuerpo
 
 // capturando pagina de carga
-const cargando = document.querySelector("#cargado")
+// const cargando = document.querySelector("#cargado")
 
 //boton de cerrar sesion
 const btnCerrarSesion = document.querySelector("#btn-cerrarSesion")
@@ -38,18 +44,19 @@ const botonPerfil = document.querySelector("#botonPerfil")
 const linkBotonPublicar = document.querySelector("#linkBotonPublicar")
 
 
-// window.onload = verificarEstadoLogin()
+
 
 botonPublicar.addEventListener("click", ()=>{
   verificarEstadoLogin()
+  
 })
 ///
 const verificarEstadoLogin = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-  
+      console.log("usuario logueado, f verificarEstadoLogin")
       // alert(".....")
-      verificacionLogin()
+      // verificacionLogin()
       // cargando.style.display = "none !important"
       // El usuario está logueado, realiza acciones aquí
       // cargando.style.display="none"
@@ -60,8 +67,6 @@ const verificarEstadoLogin = ()=>{
         //si no esta logueado o se desloguea
          console.log("usuario nullo, deslogueado, f change");
          imagenNavbarPerfilConteiner.style.display = "none"
-  
-  
         
         linkBotonPublicar.href = "./login.html"  
         
@@ -121,6 +126,8 @@ const verificacionLogin = ()=>{
     }
   }
   
+
+  
 const cerrarSesion = ()=>{
   firebase.auth().signOut().then(() => {
     console.log("usuario deslogueado con exito")
@@ -141,4 +148,5 @@ btnPerfil.addEventListener("click", ()=>{
 })
 
 //boton flotante publicar
+
 
