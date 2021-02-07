@@ -17,6 +17,6 @@
 /* medias queries */
 @media (max-width: 768px) { 
     .container{
-       font-size: 1vw;
+        font-size: 1vw;
     }
 }
