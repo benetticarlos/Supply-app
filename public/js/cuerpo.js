@@ -2,6 +2,7 @@
 
 
 
+
 //base martin
 // Your web app's Firebase configuration
 
@@ -131,6 +132,7 @@ const verificacionLogin = ()=>{
   }
   
 
+
   
 const cerrarSesion = ()=>{
   firebase.auth().signOut().then(() => {
@@ -140,6 +142,7 @@ const cerrarSesion = ()=>{
     console.log("deslogueo de usuario con erro: ", error)
   });
 }
+
 
 
 //control del boton de cerrar sesion

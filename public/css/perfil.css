@@ -13,3 +13,13 @@
     /* box-sizing: border-box; */
     width: 7vw;
 }
+<<<<<<< HEAD
+=======
+
+/* medias queries */
+@media (max-width: 768px) { 
+    .container{
+       font-size: 1vw;
+    }
+}
+>>>>>>> 39a434f67f93c21ad5f2f73f5fbc7ff79024858a
