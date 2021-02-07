@@ -1,5 +1,8 @@
+const { response } = require('express')
 const express = require('express')
+const { request } = require('http')
 const app = express()
+const path = require('path')
 
 const publicacion_controlles = require('./controllers/publicacionControlles')
 
@@ -15,12 +18,18 @@ app.get('/ultimoId', publicacion_controlles.obtenerIdUltimaPublicacion)
 
 app.post('/ingresarproducto', publicacion_controlles.agregarPublicacion)
 
+app.post('/ingresarservicio', publicacion_controlles.agregarPublicacion)
+
 app.delete('/borrar', publicacion_controlles.borrarPublicacion)
 
 app.put('/editar', publicacion_controlles.editarPublicacion)
 
+app.post('/SubirImagen', publicacion_controlles.agregarImagen)
 
 
+app.get('/ingresarproducto', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'ingresarproducto.html'))
+})
 
 
 

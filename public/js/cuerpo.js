@@ -1,4 +1,5 @@
-
+// capturando pagina de carga
+const cargando = document.querySelector("#cargado")
 
 
 
@@ -130,9 +131,6 @@ const verificacionLogin = ()=>{
       console.log(`Error al loguear ususario ${email}, f verificacionLogin()`)
     }
   }
-  
-
-
   
 const cerrarSesion = ()=>{
   firebase.auth().signOut().then(() => {

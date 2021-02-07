@@ -32,19 +32,26 @@ const obtenerIdUltimaPublicacion = (req, res)=>{
 }
 
 const agregarPublicacion = (req, res)=>{
-   console.log("este es el rec body :", req.body)
+   console.log(req.body)
    const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario} = req.body
-    conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`) VALUES (?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario],(err, result)=>{
+    conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`) VALUES (?,?,?,?,?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario],(err, result)=>{
         if(err){
             throw err
         
         }else {           
            
                 console.log(result)
+                res.send("alta exitosa")
             }
         })
-        res.send("alta exitosa")
 }
+
+
+const agregarImagen = (req, res) => {
+    const {imagenurl} = req.body
+    conexion_db.query('INSERT INTO `publicacion_t`(`imagenurl`) VALUES (?)' ([imagenurl]))
+}
+
 
 const borrarPublicacion = (req, res) => {
     const {id} = req.body
@@ -141,6 +148,7 @@ module.exports = {
                  agregarComentario,
                  borrarComentario,
                  editarComentario,
-                 obtenerIdUltimaPublicacion
+                 obtenerIdUltimaPublicacion,
+                 agregarImagen
             }
   

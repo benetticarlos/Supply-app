@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -13,6 +12,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand contenedor-navbar" href="#">
@@ -44,40 +44,50 @@
 
     <div class="container" style="display: flex; height: 115vh;">
         <section class="form-productos">
-            <form action="http://localhost:8080/ingresarproducto" id="formularioProducto">
+            <form action="" id="formularioServicio">
                 <div class="mb-3">
-                    <label for="producto" class="labelForm form-label">¡Qué estás buscando?</label>
+                    <label for="formGroupExampleInput" class="labelForm form-label">¡Qué estás buscando?</label>
                     <input type="text" name="publicacion" class="controlForm form-control" id="publicacion"
-                        placeholder="Indicá producto, marca, modelo, etc">
+                        placeholder="Indicá que servicio necesitas">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="labelForm form-label">Rubro</label>
+                    <select class="selectForm form-select" id="rubros" aria-label="Default select example">
+                        <option selected>Seleccione una categoria</option>
+                        <option value="Asesoramiento Contable y Legal">Asesoramiento Contable y Legal
+                        </option>
+                        <option value="cuidado personal">cuidado personal
+                        </option>
+                        <option value="cursos y clases">cursos y clases
+                        </option>
+                        <option value="fiestas y eventos" class="value">fiestas y eventos
+                        </option>
+                        <option value="fotografia, musica y cine" class="value">fotografia, musica y cine
+                        </option>
+                        <option value="hogar y construccion" class="value">hogar y construccion
+                        </option>
+                        <option value="mantenimiento de vehiculos" class="value">mantenimiento de vehiculos
+                        </option>
+                        <option value="medicina y salud" class="value">medicina y salud
+                        </option>
+                        <option value="servicios para mascotas" class="value">servicios para mascotas
+                        </option>
+                        <option value="tecnologia" class="value">tecnologia</option>
+                        <option value="transporte" class="value">transporte</option>
+                        <option value="otros" class="value">otros</option>
+                    </select>
                 </div>
                 <div class="mb-3" style="width: 100%;">
                     <label for="formGroupExampleInput2" class="labelForm form-label">¿Qué precio estás dispuesto a
                         pagar?</label>
                     <input type="text" name="precio" class="controlForm form-control" id="precio"
-                        placeholder="Cantidad en pesos">
+                        placeholder="pesos por hora">
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" name="acordarVendedor" type="checkbox" id="acordarVendedor"
                         value="option1">
-                    <label class="labelCheckForm form-check-label" for="inlineCheckbox1">acordar con el vendedor</label>
-                </div>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="labelForm form-label" style="
-                width: 100%;
-                margin-top: 1vh;">Condición</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="nuevo" value="nuevo">
-                        <label class="form-check-label" for="inlineRadio1" style="color: #eeeeee;">nuevo</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="usado" value="usado">
-                        <label class="form-check-label" for="inlineRadio2" style="color: #eeeeee;">usado</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="indistinto"
-                            value="indistinto">
-                        <label class="form-check-label" for="inlineRadio2" style="color: #eeeeee;">indistinto</label>
-                    </div>
+                    <label class="labelCheckForm form-check-label" for="inlineCheckbox1">acordar con el
+                        profesional</label>
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="labelForm form-label">Zona</label>
@@ -98,14 +108,14 @@
                 </div>
                 <input class="form-control" name="imagenurl" type="file" value="imagenurl" id="imagenurl" hidden>
                 <label for="imagenurl" class="form-label" id="IngresarImagenBoton" style="
-                    width: 100%;
-                    display: contents;
-                ">
+                width: 100%;
+                display: contents;
+            ">
                     <img src="./images/iconoDescarga.svg" alt="" id="iconoDescarga" class="iconoDescarga" style="
-                        /* box-sizing: border-box; */
-                        margin-left: 2.4vw;
-                        margin-top: 4vh;
-                    ">
+                    /* box-sizing: border-box; */
+                    margin-left: 2.4vw;
+                    margin-top: 4vh;
+                ">
                 </label>
             </div>
             <div class="boton-publicarBusqueda">
@@ -115,9 +125,6 @@
             </form>
         </div>
     </div>
-
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/cargarProducto.js"></script>
+    <script src="./js/cargarServicio.js"></script>
 </body>
 </html>
