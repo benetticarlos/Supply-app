@@ -1,8 +1,5 @@
 
-// const cargando = document.querySelector("#cargando") 
 
-// // capturando pagina de carga
-// const cargando = document.querySelector("#cargado")
 
 
 //base martin
@@ -24,8 +21,6 @@ var firebaseConfig = {
 
 //configuracion de la pantalla cuerpo
 
-// capturando pagina de carga
-// const cargando = document.querySelector("#cargado")
 
 //boton de cerrar sesion
 const btnCerrarSesion = document.querySelector("#btn-cerrarSesion")
@@ -43,67 +38,75 @@ const botonPublicar = document.querySelector("#botonPublicar")
 const botonPerfil = document.querySelector("#botonPerfil")
 const linkBotonPublicar = document.querySelector("#linkBotonPublicar")
 
+//ilnk iniciar sesion/ registrarse
+const iniciarSesionRegistrarse = document.querySelector("#iniciarSesionRegistrarse")
 
+//link iniciar sesion o loguearse
+iniciarSesionRegistrarse.addEventListener("click", ()=>{
+  location.href = "http://localhost:8080/login.html"
+})
 
-
+// boton publicar carga link dinamico
 botonPublicar.addEventListener("click", ()=>{
   verificarEstadoLogin()
   
 })
-///
+
+///se utiliza para saber cuando un usuario es ta logueado
 const verificarEstadoLogin = ()=>{
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log("usuario logueado, f verificarEstadoLogin")
-      // alert(".....")
-      // verificacionLogin()
-      // cargando.style.display = "none !important"
-      // El usuario está logueado, realiza acciones aquí
-      // cargando.style.display="none"
+      
         console.log("usuario logueado, f change")
         linkBotonPublicar.href = "./publicarBusqueda.html"  
-        imagenNavbarPerfilConteiner.style.display = "block"
+        
     } else {
         //si no esta logueado o se desloguea
          console.log("usuario nullo, deslogueado, f change");
-         imagenNavbarPerfilConteiner.style.display = "none"
+        
         
         linkBotonPublicar.href = "./login.html"  
         
-        //  botonPublicar.disabled = "true"
+        
          
     }
   
   })
   
 }
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+    //aqui toda configuracion par usuario logiueado
+    console.log("..... logueado, escuchaor general")    
+    linkBotonPublicar.href = "./publicarBusqueda.html"  
+    imagenNavbarPerfilConteiner.style.display = "block"
+    iniciarSesionRegistrarse.style.display = "none"
+    botonPerfil.style.display = "true"     
+    console.log("..... logueado fin, escuchador general")
 
-    // alert(".....")
-    verificacionLogin()
-    // cargando.style.display = "none !important"
-    // El usuario está logueado, realiza acciones aquí
-    // cargando.style.display="none"
-      console.log("usuario logueado, f change")
-      linkBotonPublicar.href = "./publicarBusqueda.html"  
-      imagenNavbarPerfilConteiner.style.display = "block"
+    //fin de configuracion para usuario logueado
+
+    //configuracion y control no tocar
+    console.log(`El susuario ${email} esta logueado`)
+    // verificacionLogin()
+    //fin de configuracion
+    
   } else {
+    alert("..... no logueado")
+    console.log("..... deslogueado, escuchaor general")    
       //si no esta logueado o se desloguea
        console.log("usuario nullo, deslogueado, f change");
        imagenNavbarPerfilConteiner.style.display = "none"
-
-
-      
-      linkBotonPublicar.href = "./login.html"  
-      
-      //  botonPublicar.disabled = "true"
-       
+       botonPerfil.style.display = "none"
+       linkBotonPublicar.href = "./login.html"  
+       iniciarSesionRegistrarse.style.display = "true"      
+       console.log("..... deslogueo fin, escuchador general")       
   }
-
 })
 
-
+//optimizado no utilizado
 const verificacionLogin = ()=>{
   
     var user = firebase.auth().currentUser;
@@ -115,13 +118,14 @@ const verificacionLogin = ()=>{
       photoUrl = user.photoURL;
       emailVerified = user.emailVerified;
       uid = user.uid;  
+      alert("..... logueado, verificarlogin")
 
+      console.log("..... logueado fin, verificarlogin fin")
       console.log(`El susuario ${email} esta logueado`)
-      botonPerfil.style.display = "true" 
-      linkBotonPublicar.href = "./publicarBusqueda.html"  
+      
+      
     }else{  
-      botonPerfil.style.display = "none"
-      linkBotonPublicar.href = "./login.html"  
+      
       console.log(`Error al loguear ususario ${email}, f verificacionLogin()`)
     }
   }
@@ -143,10 +147,10 @@ const cerrarSesion = ()=>{
 btnCerrarSesion.addEventListener("click", ()=>{
   cerrarSesion()
 })
+//boton perfil
 btnPerfil.addEventListener("click", ()=>{
   location.href = "http://localhost:8080/perfil.html"
 })
 
-//boton flotante publicar
 
 
