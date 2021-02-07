@@ -10,19 +10,20 @@
     
 </head>
 <body>
+  <div id="contenedor-total">
 
     <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid" id="contenedor-completo">
             <a class="navbar-brand contenedor-navbar" href="#">
-                <div>
+                   <div>
 
                     <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
                     <span class="nombre-app">
 
                         Supply
                     </span>
-                </div>
-                <div class="container-fluid">
+                   </div>
+                    <div class="container-fluid">
                     <form class="d-flex">
                       <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                       <button class="btn btn-outline-success" type="submit">Search</button>
@@ -38,15 +39,16 @@
                 </div>
 
                 
-                <!-- <button id="botonPerfil" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span> -->
-                </button>
+      
             </a>
             
         </div>
     </nav>
   
 <!-- inicio carrusel -->
+ 
+
+
     <div id="containerCarrousel" class="container-carrousel">
       <a id="linkBotonPublicar" href="./publicarBusqueda.html"> <button type="button" id="botonPublicar" class="btn btn-secondary" style="width: fit-content; ">Busco un producto</button></a>
       <div class="carrusel" style="height: auto;">
@@ -130,7 +132,7 @@
       </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
 <!-- inicio del modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div id="miModal" class="modal-dialog ">
       <div id="modalContent" class="modal-content">
         <!-- <div id="modalHeader" class="modal-header">
@@ -211,6 +213,7 @@
       </div>
     </div>
   </div>
+</div>
 <!-- fin del modal -->
 <!-- pagina de carga -->
 <!-- <div id="cargando" class="d-flex justify-content-center loader">
