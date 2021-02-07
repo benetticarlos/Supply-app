@@ -26,7 +26,7 @@
                     <div class="container-fluid">
                     <form class="d-flex">
                       <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
+                      <button class="btn btn-outline-success" id="botonBusqueda" type="button">Search</button>
                     </form>
                 </div>
                 <div class="contenedor-registro">
@@ -222,12 +222,36 @@
   </div>
 </div> -->
 <!-- //The core Firebase JS SDK is always required and must be listed first --> -->
+<script>
+
+const productos = [
+  {nombre: 'Platanos', Valor:}
+]
+
+
+  const barraBusqueda = document.querySelector('#barraBusqueda')
+  const botonBusqueda = document.querySelector('#botonBusqueda')
+
+  const filtrar = ()=> {
+    console.log(barraBusqueda.value);
+  }
+  
+  botonBusqueda.addEventListener('click', filtrar)
+  
+  
+</script>
+
+
 <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/cuerpo.js"></script>
 
+<script src="./js/cargarProducto.js"></script>
+<script src="./js/cargarServicio.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
 
 
 
