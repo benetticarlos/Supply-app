@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/formulariosProductoServicio.css">
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulariosProductoServicio.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand contenedor-navbar" href="#">
-                <div  onclick="window.location.href='cuerpo.html'">
-
+                <div onclick="window.location.href='cuerpo.html'">
                     <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
                     <span class="nombre-app">
-
                         Supply
                     </span>
                 </div>
                 <div class="container-fluid">
                     <form class="d-flex">
-                        <input class="controlForm form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="controlForm form-control me-2" type="search" placeholder="Search"
+                            aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
@@ -33,148 +33,98 @@
                     <button type="button" class="btn-navbar btn ">Categorias</button>
                     <button type="button" class="btn-navbar btn ">Favoritos</button>
                 </div>
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </a>
-
         </div>
     </nav>
 
     <div class="container" style="display: flex; height: 115vh;">
         <section class="form-productos">
-
             <form action="" id="formularioServicio">
-
-            
-            <div class="mb-3">
-                <label for="formGroupExampleInput" class="labelForm form-label">¡Qué estás buscando?</label>
-                <input type="text" name="publicacion" class="controlForm form-control" id="publicacion" placeholder="Indicá que servicio necesitas">
-              </div>
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="labelForm form-label">Rubro</label>
-                <select class="selectForm form-select" id="rubros" aria-label="Default select example">
-                    <option selected>Seleccione una categoria</option>
-                    <option value="Asesoramiento Contable y Legal">Asesoramiento Contable y Legal 
-
-                    </option>
-                    <option value="cuidado personal">cuidado personal
-
-                    </option>
-                    <option value="cursos y clases">cursos y clases
-
-                    </option>
-                    <option value="fiestas y eventos" class="value">fiestas y eventos
-
-                    </option>
-                    <option value="fotografia, musica y cine" class="value">fotografia, musica y cine
-
-                    </option>
-                    <option value="hogar y construccion" class="value">hogar y construccion
-
-                    </option>
-                    <option value="mantenimiento de vehiculos" class="value">mantenimiento de vehiculos
-
-                    </option>
-                    <option value="medicina y salud" class="value">medicina y salud
-
-                    </option>
-                    <option value="servicios para mascotas" class="value">servicios para mascotas
-
-                    </option>
-                    <option value="tecnologia" class="value">tecnologia</option>
-                    <option value="transporte" class="value">transporte</option>
-                    <option value="otros" class="value">otros</option>
-                </select>
-            </div>
-
-            
-            <div class="mb-3" style="width: 100%;">
-                <label for="formGroupExampleInput2" class="labelForm form-label">¿Qué precio estás dispuesto a pagar?</label>
-                <input type="text" name="precio" class="controlForm form-control" id="precio" placeholder="pesos por hora">
-            
-            
-            
-            </div>
-            
-            
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" name="acordarVendedor" type="checkbox" id="acordarVendedor" value="option1">
-                <label class="labelCheckForm form-check-label" for="inlineCheckbox1">acordar con el profesional</label>
-              </div>
-
-
-              <div class="mb-3">
-                <label for="formGroupExampleInput2" class="labelForm form-label">Zona</label>
-                <input type="text" name="zona" class="controlForm form-control" id="zona" placeholder="Ciudad o región">
-            </div>
-
-            <div class="form-group">
-                <label for="formGroupExampleInput2" class="labelForm form-label">Detalle</label>
-                <label for="detalle">Example textarea</label>
-                <textarea class="form-control" id="detalle" name="detalle" rows="6"></textarea>
-              </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="labelForm form-label">¡Qué estás buscando?</label>
+                    <input type="text" name="publicacion" class="controlForm form-control" id="publicacion"
+                        placeholder="Indicá que servicio necesitas">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="labelForm form-label">Rubro</label>
+                    <select class="selectForm form-select" id="rubros" aria-label="Default select example">
+                        <option selected>Seleccione una categoria</option>
+                        <option value="Asesoramiento Contable y Legal">Asesoramiento Contable y Legal
+                        </option>
+                        <option value="cuidado personal">cuidado personal
+                        </option>
+                        <option value="cursos y clases">cursos y clases
+                        </option>
+                        <option value="fiestas y eventos" class="value">fiestas y eventos
+                        </option>
+                        <option value="fotografia, musica y cine" class="value">fotografia, musica y cine
+                        </option>
+                        <option value="hogar y construccion" class="value">hogar y construccion
+                        </option>
+                        <option value="mantenimiento de vehiculos" class="value">mantenimiento de vehiculos
+                        </option>
+                        <option value="medicina y salud" class="value">medicina y salud
+                        </option>
+                        <option value="servicios para mascotas" class="value">servicios para mascotas
+                        </option>
+                        <option value="tecnologia" class="value">tecnologia</option>
+                        <option value="transporte" class="value">transporte</option>
+                        <option value="otros" class="value">otros</option>
+                    </select>
+                </div>
+                <div class="mb-3" style="width: 100%;">
+                    <label for="formGroupExampleInput2" class="labelForm form-label">¿Qué precio estás dispuesto a
+                        pagar?</label>
+                    <input type="text" name="precio" class="controlForm form-control" id="precio"
+                        placeholder="pesos por hora">
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="acordarVendedor" type="checkbox" id="acordarVendedor"
+                        value="option1">
+                    <label class="labelCheckForm form-check-label" for="inlineCheckbox1">acordar con el
+                        profesional</label>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="labelForm form-label">Zona</label>
+                    <input type="text" name="zona" class="controlForm form-control" id="zona"
+                        placeholder="Ciudad o región">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2" class="labelForm form-label">Detalle</label>
+                    <label for="detalle">Example textarea</label>
+                    <textarea class="form-control" id="detalle" name="detalle" rows="6"></textarea>
+                </div>
         </section>
-
-
         <div class="imagen-descarga">
             <h4>Agregá una imagen (opcional)</h4>
-
-            <div class="imagen-opcional" >
+            <div class="imagen-opcional">
                 <div class="imagenSRC">
                     <img src="" class="img-fluid" id="pruebasrc" alt="">
-
                 </div>
-                
-                <input class="form-control" name="imagenurl" type="file" value="imagenurl"id="imagenurl" hidden>
+                <input class="form-control" name="imagenurl" type="file" value="imagenurl" id="imagenurl" hidden>
                 <label for="imagenurl" class="form-label" id="IngresarImagenBoton" style="
                 width: 100%;
                 display: contents;
             ">
-
-                    <img src="./images/iconoDescarga.svg" alt=""  id="iconoDescarga" class="iconoDescarga" style="
+                    <img src="./images/iconoDescarga.svg" alt="" id="iconoDescarga" class="iconoDescarga" style="
                     /* box-sizing: border-box; */
                     margin-left: 2.4vw;
                     margin-top: 4vh;
                 ">
                 </label>
-                
-        
             </div>
-
-                <div class="boton-publicarBusqueda">
-                    <button id="botonPublicarBusqueda" type="submit" class="btn-buscar btn btn-secondary" style="width: fit-content;">Publicar busqueda</button>
-                </div>
+            <div class="boton-publicarBusqueda">
+                <button id="botonPublicarBusqueda" type="submit" class="btn-buscar btn btn-secondary"
+                    style="width: fit-content;">Publicar busqueda</button>
+            </div>
             </form>
         </div>
     </div>
-
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<!-- <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script> -->
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <script>
-  // Your web app's Firebase configuration
-//   var firebaseConfig = {
-//     apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
-//     authDomain: "localstorage-e6721.firebaseapp.com",
-//     projectId: "localstorage-e6721",
-//     storageBucket: "localstorage-e6721.appspot.com",
-//     messagingSenderId: "719797837765",
-//     appId: "1:719797837765:web:6cf7cce3a249d07edbf5ac"
-//   };
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
-// </script>
-
-<script src="./js/cargarServicio.js"></script>
-    
+    <script src="./js/cargarServicio.js"></script>
 </body>
 </html>
