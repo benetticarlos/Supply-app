@@ -1,31 +1,17 @@
-// const { response } = require("express");
 
-
-
-
-
-
-
+//traer el formulario
 let formularioProducto = document.getElementById('formularioProducto')
 
 
-
+//cuando aprete el botón enviar datos se ejecutara esta funcion
 formularioProducto.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log('me diste un click');
     
+    //traigo los datos del formulario
     let datos = new FormData(formularioProducto)
     
-    console.log(datos);
-    console.log(datos.get('publicacion'));
-    console.log(datos.get('precio'));
-    console.log(datos.get('zona'));
-    console.log(datos.get('detalle'));
-    console.log("esto es mi blob ",blobImagen);
     
-    // console.log(file);
-    
-    
+    //funcion para tomar los datos del check "condicion"
     let condicionCheck = "";
     
     let nuevo = document.getElementById("nuevo")
@@ -41,13 +27,32 @@ formularioProducto.addEventListener('submit', function (e) {
     }
     
     console.log(condicionCheck);
+
+
+    //funcion "precio" dependiendo si esta
+    //presionado el check o no
+
+    let precio = ""
+
+    let precioCheck = document.getElementById("acordarVendedor")
+
+    if (precioCheck.checked) {
+        precio = "a acordar con el vendedor"
+    }else {
+        precio = datos.get('precio')
+    }
+
+console.log("este es mi ", precio);
+
+
+
     
     
 
 let _data = {
     "publicacion": datos.get('publicacion'), 
     "detalle": datos.get('detalle'),
-    "precio": datos.get('precio'),
+    "precio": precio,
     "zona": datos.get('zona'),
     "imagenurl": blobImagen,
     "rubro": "",
@@ -64,6 +69,18 @@ let _data = {
   .then(response => response.json()) 
   .then(json => console.log(json))
   .catch(err => console.log(err))
+
+
+
+    
+  console.log(datos);
+  console.log("publicacion: ", datos.get('publicacion'));
+  console.log("precio: ", precio);
+  console.log("zona:", datos.get('zona'));
+  console.log("condicion:",condicionCheck);
+  console.log("imagen: ",blobImagen);
+  
+
 })
 
 
@@ -153,6 +170,6 @@ imagenurl.addEventListener('change', function (e) {
 })
 
 
-console.log("este es mi blob otra vez", blobImagen);
+
 
 

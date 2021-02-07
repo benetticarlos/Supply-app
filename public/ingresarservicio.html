@@ -44,7 +44,7 @@
         </div>
     </nav>
 
-    <div class="container" style="display: flex; height: 89vh;">
+    <div class="container" style="display: flex; height: 115vh;">
         <section class="form-productos">
 
             <form action="" id="formularioServicio">
@@ -52,49 +52,49 @@
             
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="labelForm form-label">¡Qué estás buscando?</label>
-                <input type="text" class="controlForm form-control" id="publicacion" placeholder="Indicá que servicio necesitas">
+                <input type="text" name="publicacion" class="controlForm form-control" id="publicacion" placeholder="Indicá que servicio necesitas">
               </div>
               <div class="mb-3">
                 <label for="formGroupExampleInput2" class="labelForm form-label">Rubro</label>
-                <select class="selectForm form-select" aria-label="Default select example">
+                <select class="selectForm form-select" id="rubros" aria-label="Default select example">
                     <option selected>Seleccione una categoria</option>
-                    <option value="1">Asesoramiento Contable y Legal 
+                    <option value="Asesoramiento Contable y Legal">Asesoramiento Contable y Legal 
 
                     </option>
-                    <option value="2">cuidado personal
+                    <option value="cuidado personal">cuidado personal
 
                     </option>
-                    <option value="3">cursos y clases
+                    <option value="cursos y clases">cursos y clases
 
                     </option>
-                    <option value="4" class="value">fiestas y eventos
+                    <option value="fiestas y eventos" class="value">fiestas y eventos
 
                     </option>
-                    <option value="5" class="value">fotografia, musica y cine
+                    <option value="fotografia, musica y cine" class="value">fotografia, musica y cine
 
                     </option>
-                    <option value="6" class="value">hogar y construccion
+                    <option value="hogar y construccion" class="value">hogar y construccion
 
                     </option>
-                    <option value="7" class="value">mantenimiento de vehiculos
+                    <option value="mantenimiento de vehiculos" class="value">mantenimiento de vehiculos
 
                     </option>
-                    <option value="8" class="value">medicina y salud
+                    <option value="medicina y salud" class="value">medicina y salud
 
                     </option>
-                    <option value="9" class="value">servicios para mascotas
+                    <option value="servicios para mascotas" class="value">servicios para mascotas
 
                     </option>
-                    <option value="10" class="value">tecnologia</option>
-                    <option value="11" class="value">transporte</option>
-                    <option value="12" class="value">otros</option>
+                    <option value="tecnologia" class="value">tecnologia</option>
+                    <option value="transporte" class="value">transporte</option>
+                    <option value="otros" class="value">otros</option>
                 </select>
             </div>
 
             
             <div class="mb-3" style="width: 100%;">
                 <label for="formGroupExampleInput2" class="labelForm form-label">¿Qué precio estás dispuesto a pagar?</label>
-                <input type="text" class="controlForm form-control" id="precio" placeholder="pesos por hora">
+                <input type="text" name="precio" class="controlForm form-control" id="precio" placeholder="pesos por hora">
             
             
             
@@ -102,15 +102,21 @@
             
             
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <input class="form-check-input" name="acordarVendedor" type="checkbox" id="acordarVendedor" value="option1">
                 <label class="labelCheckForm form-check-label" for="inlineCheckbox1">acordar con el profesional</label>
               </div>
 
 
               <div class="mb-3">
                 <label for="formGroupExampleInput2" class="labelForm form-label">Zona</label>
-                <input type="text" class="controlForm form-control" id="zona" placeholder="Ciudad o región">
+                <input type="text" name="zona" class="controlForm form-control" id="zona" placeholder="Ciudad o región">
             </div>
+
+            <div class="form-group">
+                <label for="formGroupExampleInput2" class="labelForm form-label">Detalle</label>
+                <label for="detalle">Example textarea</label>
+                <textarea class="form-control" id="detalle" name="detalle" rows="6"></textarea>
+              </div>
         </section>
 
 
