@@ -224,18 +224,34 @@
   </div>
 </div> -->
 <!-- //The core Firebase JS SDK is always required and must be listed first --> -->
+
+
+<!-- barra busqueda -->
 <script>
+  // barra de busqueda
 
-const productos = [
-  {nombre: 'Platanos', Valor:}
-]
+//   const productos = [
+//   {nombre: 'banana', valor: 500},
+//   {nombre: 'pera', valor: 300},
+//   {nombre: 'sandia', valor: 600}
+// ]
 
 
-  const barraBusqueda = document.querySelector('#barraBusqueda')
+const barraBusqueda = document.querySelector('#barraBusqueda')
   const botonBusqueda = document.querySelector('#botonBusqueda')
 
   const filtrar = ()=> {
     console.log(barraBusqueda.value);
+
+
+    const texto = barraBusqueda.value.toLowerCase();
+    for(let data of miDato){
+      let publicacion = data.publicacion
+      if (publicacion.indexOf(texto) !== -1) {
+        console.log('resultados de la busqueda: ',data.publicacion);
+      }
+    }
+  
   }
   
   botonBusqueda.addEventListener('click', filtrar)
@@ -243,6 +259,7 @@ const productos = [
   
 </script>
 
+<!-- barra busqueda  -->
 
 <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>

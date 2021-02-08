@@ -63,12 +63,15 @@ const direccionarA = (htmlNombre)=>{
   window.location.href='../'+htmlNombre
 }
 
-// var miDato = [{}]
+var miDato = [{}]
 fetch('http://localhost:8080')
   .then(response => response.json())
   .then(data => {
     console.log(data)
     // console.log(data[0].imagenurl)
+
+
+    miDato = data
 
     data.forEach(elemento => {
       console.log(elemento.id)
