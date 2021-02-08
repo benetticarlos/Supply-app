@@ -1,5 +1,5 @@
-.container {
-    height: 31.25rem;
+.container::before {
+    height: 89vh;
     display: flex;
 }
 
@@ -69,5 +69,9 @@
 
     .avatares {
         width: 13vw;
+    }
+
+    .form-group {
+        margin-bottom: 3rem;
     }
 }
