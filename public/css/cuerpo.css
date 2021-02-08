@@ -9,7 +9,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    /* font-family: 'Roboto', sans-serif;*/
+} 
 #contenedor-total{
     max-width: 100%;
 }
@@ -198,6 +199,10 @@
  
 
  /* modal  */
+ #exampleModal{
+    z-index: 30000;
+    
+}
  #miModal{
      max-width: 75%;
  }
@@ -270,7 +275,7 @@
      z-index: 2000;
 
     font-size: 1.5rem;
-    width: 160px;
+    width: 255px;
     border-radius: 10px;
     
 
@@ -292,3 +297,73 @@
 
 }
 
+
+
+/* media query */
+
+
+@media screen and (max-width: 370px) {
+    #iniciarSesionRegistrarse{
+        display: none;
+    }
+    #menuBusquedas{
+        text-align: center;
+        display: block;
+    }
+    .menuBusqueda{
+        text-align: center;
+    }
+    .menuBusqueda h3{
+        font-size: 32px;
+    }
+    #unaTrajeta{
+        display: flex;
+        flex-direction: initial;
+        border-style: 0.3px;
+        border-radius: initial;
+        margin: 5px 0;
+    }
+    #imgTarjeta{
+        width: 40%;
+    }
+    .busquedas{
+        padding: 0;
+    }
+    .busquedasPublicadas{
+        padding: 0;
+        width: 100%;
+    }
+    #containerTarjeta{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #cargaDinamica{
+        padding: 0;
+        margin: 0;
+    }
+   
+    #botonPublicar{
+        width: initial;
+        width: 91px;
+    height: 45px;
+    overflow: hidden;
+    padding: 0;
+    
+    }
+    #barraBusquedaContainer{
+        position: absolute;
+    top: 371px;
+    left: 1px;
+    z-index: 25000;
+    width: 99%;
+    height: 30px;
+    }
+    #barraBusqueda{
+        width: 97%;
+    }
+    #exampleModal{
+        z-index: 30000;
+        width: 127%;
+    }
+  }

@@ -1,5 +1,3 @@
-// capturando pagina de carga
-const cargando = document.querySelector("#cargado")
 
 
 
@@ -43,10 +41,14 @@ const linkBotonPublicar = document.querySelector("#linkBotonPublicar")
 //ilnk iniciar sesion/ registrarse
 const iniciarSesionRegistrarse = document.querySelector("#iniciarSesionRegistrarse")
 
+
+
+
 //link iniciar sesion o loguearse
 iniciarSesionRegistrarse.addEventListener("click", ()=>{
   location.href = "http://localhost:8080/login.html"
 })
+
 
 // boton publicar carga link dinamico
 botonPublicar.addEventListener("click", ()=>{
@@ -96,7 +98,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     //fin de configuracion
     
   } else {
-    alert("..... no logueado")
+    
     console.log("..... deslogueado, escuchaor general")    
       //si no esta logueado o se desloguea
        console.log("usuario nullo, deslogueado, f change");
@@ -120,7 +122,7 @@ const verificacionLogin = ()=>{
       photoUrl = user.photoURL;
       emailVerified = user.emailVerified;
       uid = user.uid;  
-      alert("..... logueado, verificarlogin")
+      
 
       console.log("..... logueado fin, verificarlogin fin")
       console.log(`El susuario ${email} esta logueado`)
@@ -134,6 +136,7 @@ const verificacionLogin = ()=>{
   
 const cerrarSesion = ()=>{
   firebase.auth().signOut().then(() => {
+    iniciarSesionRegistrarse.style.display = "true"   
     console.log("usuario deslogueado con exito")
   }).catch((error) => {
     // An error happened.
@@ -146,12 +149,32 @@ const cerrarSesion = ()=>{
 //control del boton de cerrar sesion
 
 btnCerrarSesion.addEventListener("click", ()=>{
+  
   cerrarSesion()
 })
 //boton perfil
 btnPerfil.addEventListener("click", ()=>{
   location.href = "http://localhost:8080/perfil.html"
 })
+
+
+//carga una tarjeta en modal
+//tarjeta de informacion
+
+const unaTrajeta = document.querySelectorAll("#unaTrajeta")
+
+const imgTarjeta =document.querySelectorAll("#imgTarjeta")
+const cardTitle =document.querySelectorAll("#cardTitle")
+const cardText =document.querySelectorAll("#cardText")
+
+
+var datosTarjetas = []
+unaTrajeta.addEventListener("click", ()=>{
+  console.log("una tarjeta")
+  this.push(cardTitle.innerText)
+})
+console.log(datosTarjetas)
+
 
 
 

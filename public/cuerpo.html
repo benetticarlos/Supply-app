@@ -24,7 +24,7 @@
                     </span>
                    </div>
                     <div class="container-fluid">
-                    <form class="d-flex">
+                    <form id="barraBusquedaContainer" class="d-flex">
                       <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                       <button class="btn btn-outline-success" id="botonBusqueda" type="button">Search</button>
                     </form>
@@ -52,7 +52,7 @@
 
 
     <div id="containerCarrousel" class="container-carrousel">
-      <a id="linkBotonPublicar" href="#"> <button type="button" id="botonPublicar" class="btn btn-secondary" style="width: fit-content; ">Busco un producto</button></a>
+      <a id="linkBotonPublicar" href="#"> <button type="button" id="botonPublicar" class="btn btn-secondary" style="">Busco un producto</button></a>
       <div class="carrusel" style="height: auto;">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -74,18 +74,18 @@
 
           <div class="cuerpo">
     
-              <div class="filtros">
+              <!-- <div class="filtros">
                   <h4>Filtros</h4>
     
                   <h6>precio:</h6>
                 
-            </div>
+            </div> -->
             
             <div class="busquedas">
                 <div class="menuBusqueda">
                     <h3>Busquedas publicadas</h3>
     
-                    <ul class="menu" data-animation="diagonal">
+                    <ul id="menuBusquedas" class="menu" data-animation="diagonal">
                       <li>
                         <a href="#0" style="    font-size: x-large;
                         font-weight: bolder;">
@@ -132,14 +132,13 @@
           
         </div>
       </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
-<!-- inicio del modal -->
+   
+
+    <!-- inicio del modal -->
        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div id="miModal" class="modal-dialog ">
       <div id="modalContent" class="modal-content">
-        <!-- <div id="modalHeader" class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        </div> -->
+        
         <button id="btnClose" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div id="cuerpoModal" class="modal-body">
             <div id="cardMb-3" class="card mb-3" >
@@ -164,25 +163,12 @@
                           
                         </div>
                       </div>
-                      <!-- <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                      
                     </div>
                   </div>
                 </div>
               </div>
-            <!-- <div class="infoProducto">
-                <div class="imgModal">
-                    <img src="./images/carteras.jpg" class="img-fluid" alt="...">
-                </div>
-                <div class="detalleModal">
-
-                </div>
-                
-            </div>
-            <div class="comentarioModal">
-
-            </div> -->
+            
         </div>
         <div id="modalFooter" class="modal-footer " >
           <div class="alert alert-primary" role="alert">
@@ -209,8 +195,7 @@
           <div class="alert alert-dark" role="alert">
             A simple dark alert—check it out!
           </div>
-          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button> -->
+          
         </div>
       </div>
     </div>
@@ -235,6 +220,7 @@
 //   {nombre: 'pera', valor: 300},
 //   {nombre: 'sandia', valor: 600}
 // ]
+
 
 
 const barraBusqueda = document.querySelector('#barraBusqueda')
