@@ -1,10 +1,33 @@
     /* formularioProducto */
 
+.container {
+    display: flex; height: auto;
+}
+/* 
+.nombre-app:before {
+    content: "Supply";
+} */
+
+.btn-navbar:before {
+    content: none;
+}
+
+
+
+
+   #formularioProducto {
+    margin-bottom: 4rem;
+   }
+
+   #formularioServicio {
+       margin-bottom: 4rem;
+   }
+
     .form-productos{
         width: 42%;
         margin-right: 10vw;
     margin-left: 6vw;
-    margin-top: 7vh;
+    margin-top:  2rem;
     }
 
     .labelForm {
@@ -20,33 +43,34 @@
     }
 
     .controlForm {
-        width: 50%;
+        width: 90%;
     }
 
     .selectForm{
-        width: 50%;
+        width: 90%;
     }
 
     .imagen-descarga {
         
-    margin-top: 10vh;
+    margin-top: 3rem;
 
     }
 
-    .imagen-descarga h4{
+    .imagen-descarga h4:before{
         color: #eeeeee;
+        content: agregá una imagen (opcional);
     }
 
     .imagen-opcional {
         background-color: #eeeeee;
-        width: 35vh;
-        height: 35vh;
+        width: 12.337rem;
+        height: 12.337rem;
         display: flex;
         border-radius: 30px;
         
     margin: auto;
-    margin-top: 7vh;
-    margin-bottom: 2vh;
+    margin-top: 2.468rem;
+    margin-bottom: 0.705rem;
 
     
     }
@@ -73,8 +97,12 @@
     }
     
     .iconoDescarga {
-        width: 24vh;
+        width: 8.46rem;
         margin: auto;
+
+                    margin-left: 2.4vw;
+                    margin-top: 4vh;
+
     }
     
     .iconoDescarga:hover {
@@ -83,7 +111,128 @@
     .boton-publicarBusqueda {
         width: fit-content;
         margin: auto;
-        margin-top: 25vh;
+        margin-top: 8.813rem;
     }
 
+
+    #botonPublicarBusqueda:before{
+        content: "Publicar busqueda";
+      }
+      
+
+      /* @media (max-width:400px){
+        #botonPublicarBusqueda:before {
+            content: "AAA";
+        } */
+
+
     
+    /* medias queries */
+    @media (min-width: 580px) and (max-width: 768px)    {
+/* @media (max-width: 768px) {  */
+    .container{
+        /* font-size: 1vw; */
+    }
+
+
+        #botonPublicarBusqueda:before {
+            content: "publicar";
+        }
+    
+    .imagen-opcional {
+        width: 8.337rem;
+    height: 8.337rem
+    }
+
+
+    .iconoDescarga{
+     margin-left: none; 
+     margin-top: none;
+
+    width: 4.46rem;
+    margin: auto
+    }
+
+    .labelForm{
+        font-size: 1.3rem;
+        font-weight: initial;
+    }
+
+    .imagen-descarga h4:before {
+        content: "imagen (opcional)";
+    }
+
+    .form-productos {
+        width: 51%;
+        margin-right: 16vw;
+        margin-left: 2vw;
+        margin-top: 2rem;
+    }
+
+
+    
+    
+    
+    
+    
+}    
+@media (max-width: 580px) {
+.container {
+    display: block;
+}
+
+.form-productos {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+
+#botonPublicarBusqueda:before {
+    content: "publicar";
+}
+
+.imagen-opcional {
+width: 8.337rem;
+height: 8.337rem
+}
+
+
+.iconoDescarga{
+margin-left: none; 
+margin-top: none;
+
+width: 4.46rem;
+margin: auto
+}
+
+.labelForm{
+font-size: 1.3rem;
+font-weight: initial;
+}
+
+.imagen-descarga h4:before {
+content: "imagen (opcional)";
+}
+
+/* .form-productos {
+width: 51%;
+margin-right: 16vw;
+margin-left: 2vw;
+margin-top: 2rem;
+} */
+
+
+/* .nombre-app:before {
+    content: '';
+} */
+
+.boton-publicarBusqueda {
+    margin-top: 4.813rem;
+}
+
+
+
+}
+
