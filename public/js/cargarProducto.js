@@ -1,3 +1,26 @@
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
+            authDomain: "localstorage-e6721.firebaseapp.com",
+            projectId: "localstorage-e6721",
+            storageBucket: "localstorage-e6721.appspot.com",
+            messagingSenderId: "719797837765",
+            appId: "1:719797837765:web:6cf7cce3a249d07edbf5ac"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+
+
+
+
+
+
+
+
+
+
+
+
 //traer el formulario
 let formularioProducto = document.getElementById('formularioProducto')
 
@@ -42,7 +65,7 @@ let _data = {
     "detalle": datos.get('detalle'),
     "precio": precio,
     "zona": datos.get('zona'),
-    "imagenurl": blobImagen,
+    "imagenurl": srcImagen,
     "rubro": "",
     "condicion": condicionCheck,
     "idusuario": ""
@@ -66,6 +89,23 @@ let _data = {
   console.log("imagen: ",blobImagen);
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------FUNCION BLOB, ANDANDO PERO CON PROBLEMAS --------------------------------------
+
+
 //  Funcion que se ejecuta cuando se carga una imagen
 var blobImagen = ""
 imagenurl.addEventListener('change', function (e) {
@@ -82,6 +122,134 @@ imagenurl.addEventListener('change', function (e) {
     var hijo = document.getElementById("iconoDescarga")
     padre.removeChild(hijo)
 })
+
+// ---------------------------------------------------------------------------------------
+
+
+
+
+//------------------------FUNCION DE PRUEBA, FIREBASE ------------------------------------
+
+
+function iniciar() {
+
+    var ultimoId = ''
+    fetch('http://localhost:8080/ultimoId')
+    .then(response => response.json())
+    .then(data =>{
+        data.forEach(elemento =>{ elemento.UId
+            maxId = elemento.UId
+            console.log(maxId);
+
+
+    nombreImagen = "imagen" + (maxId + 1)
+
+    console.log("este es el nombre: ",nombreImagen);
+    
+    
+    var imagenurl  = document.getElementById('imagenurl')
+    
+    imagenurl.addEventListener('change', function (e) {
+        
+        //tomar archivo
+        var archivo = e.target.files[0];
+        
+
+    //crear referencia storage
+    var storageRef = firebase.storage().ref('imagenes/' + nombreImagen)
+    
+    // subir archivo
+    storageRef.put(archivo)
+    
+    console.log("imagen subida a firebase");
+    
+    // var pruebasrc = document.getElementById("pruebassrc")
+
+    srcImagen = `https://firebasestorage.googleapis.com/v0/b/localstorage-e6721.appspot.com/o/imagenes%2F${nombreImagen}?alt=media&token=9c172991-c595-4817-82a5-589496d554e1`
+    
+        console.log(pruebasrc);
+    
+})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+}
+
+ window.onload = iniciar
+
+
+
+
+
+// ------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //redireccionar a cuerpo
