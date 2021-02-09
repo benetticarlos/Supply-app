@@ -11,26 +11,8 @@
           firebase.initializeApp(firebaseConfig);
 
 
+function iniciar() {
 
-var imagenurl  = document.getElementById('imagenurl')
-
-imagenurl.addEventListener('change', function (e) {
-
-    //tomar archivo
-    var archivo = e.target.files[0];
-
-
-    //crear referencia storage
-    var storageRef = firebase.storage().ref('imagenes/' + archivo.name)
-
-    // subir archivo
-    storageRef.put(archivo)
-})
-
-var boton = document.getElementById('boton')
-
-boton.addEventListener('click', function () {
-    
     var ultimoId = ''
     fetch('http://localhost:8080/ultimoId')
     .then(response => response.json())
@@ -38,30 +20,191 @@ boton.addEventListener('click', function () {
         data.forEach(elemento =>{ elemento.UId
             maxId = elemento.UId
             console.log(maxId);
-        })
-    .then(ultimoId = maxId)
-    console.log(maxId);
-    })
-    console.log("Este es mi ultimo id: ", elemento.UId);
+
+
+    nombreImagen = "imagen" + (maxId + 1)
+
+    console.log("este es el nombre: ",nombreImagen);
+    
+    
+    var imagenurl  = document.getElementById('imagenurl')
+    
+    imagenurl.addEventListener('change', function (e) {
+        
+        //tomar archivo
+        var archivo = e.target.files[0];
+        
+
+    //crear referencia storage
+    var storageRef = firebase.storage().ref('imagenes/' + nombreImagen)
+    
+    // subir archivo
+    storageRef.put(archivo)
+    
+    console.log("imagen subida a firebase");
+    
+    var miImagen = document.getElementById("miImagen")
+
+                miImagen.src = `https://firebasestorage.googleapis.com/v0/b/localstorage-e6721.appspot.com/o/imagenes%2F${nombreImagen}?alt=media&token=9c172991-c595-4817-82a5-589496d554e1`
+    
+    
+})
 })
 
 
-// window.onload = inicializar
-
-// var upload;
-// // var storageRef
-
-// function inicializar() {
-//     upload = document.getElementById('upload')
-//     upload.addEventListener("change", subirImagenAFirebase, false)
 
 
-//     var storageRef = firebase.storage().ref();
-// }
 
-// function subirImagenAFirebase() {
-//     var imagenASubir = upload.files[0];
 
-//     var uploadTask = storageRef.put(imagenASubir)
 
-// }
+
+
+
+
+
+
+
+
+    })
+
+}
+
+ window.onload = iniciar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var imagenurl  = document.getElementById('imagenurl')
+
+// imagenurl.addEventListener('change', function (e) {
+
+//     //tomar archivo
+//     var archivo = e.target.files[0];
+
+
+//     //crear referencia storage
+//     var storageRef = firebase.storage().ref('imagenes/' + archivo.name)
+
+//     // subir archivo
+//     storageRef.put(archivo)
+
+//     console.log("imagen subida a firebase");
+
+
+
+
+// })
+
+// var boton = document.getElementById('boton')
+
+// boton.addEventListener('click', function () {
+    
+
+// //-----------------Funcion que encuentra el ultimo ID ----------------
+
+//     var ultimoId = ''
+//     fetch('http://localhost:8080/ultimoId')
+//     .then(response => response.json())
+//     .then(data =>{
+//         data.forEach(elemento =>{ elemento.UId
+//             maxId = elemento.UId
+//             console.log(maxId);
+        
+// // hago que ei ID sea 1 mayor y lo asigno a miImagen
+
+//             nombreImagen = "imagen" + (maxId + 1)
+
+//             console.log("este es el nombre: ",nombreImagen);
+
+//             var miImagen = document.getElementById("miImagen")
+
+//             miImagen.src = "https://firebasestorage.googleapis.com/v0/b/localstorage-e6721.appspot.com/o/imagenes%2Fbolsitas.jpg?alt=media&token=9c172991-c595-4817-82a5-589496d554e1"
+
+
+
+
+
+
+
+
+
+
+//         })
+// })
+
+
+
+
+// })
+
+
+

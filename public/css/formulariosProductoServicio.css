@@ -1,7 +1,8 @@
     /* formularioProducto */
 
 .container {
-    display: flex; height: auto;
+    display: flex;
+    height: auto;
 }
 /* 
 .nombre-app:before {
@@ -58,7 +59,7 @@
 
     .imagen-descarga h4:before{
         color: #eeeeee;
-        content: agregá una imagen (opcional);
+        content: "agregá una imagen (opcional)";
     }
 
     .imagen-opcional {

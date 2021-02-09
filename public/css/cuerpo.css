@@ -135,6 +135,13 @@
     width: 120px;
     z-index: 20000;
     display: none;
+
+    border-radius: 10px;
+    background-color: var(--celeste);
+    color: var(--claro);
+    border-color: var(--claro);
+    border-width: 2px;
+    font-weight: bold;
 }
 #btn-Perfil{
     position: absolute;

@@ -231,8 +231,14 @@ const barraBusqueda = document.querySelector('#barraBusqueda')
     for(let data of miDato){
       let publicacion = data.publicacion
       if (publicacion.indexOf(texto) !== -1) {
-        console.log('resultados de la busqueda: ',data.publicacion);
+        console.log('resultados en titulos: ',data.publicacion);
       }
+
+      let detalle = data.detalle
+      if (detalle.indexOf(texto) !== -1) {
+        console.log('resultados en detalle: ',data.detalle);
+      }
+
     }
   
   }

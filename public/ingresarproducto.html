@@ -62,7 +62,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" style="    height: auto;">
         <section class="form-productos">
             <form action="http://localhost:8080/ingresarproducto" id="formularioProducto">
                 <div class="mb-3">
@@ -131,6 +131,13 @@
             </form>
         </div>
     </div>
+
+    <div class="form-check" hidden>
+        <input class="form-check-input" name="EsUnProducto" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+        <label class="form-check-label" for="flexCheckCheckedDisabled">
+          Disabled checked checkbox
+        </label>
+      </div>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
