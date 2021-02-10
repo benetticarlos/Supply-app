@@ -64,6 +64,7 @@ const direccionarA = (htmlNombre)=>{
 }
 
  var miDato = [{}]
+ 
 fetch('http://localhost:8080')
   .then(response => response.json())
   .then(data => {
@@ -71,12 +72,8 @@ fetch('http://localhost:8080')
     // console.log(data[0].imagenurl)
 
    miDato=data
-
-     
-    
-    data.forEach(elemento => {
-
-
+   
+   data.forEach(elemento => {
 
     //   reader.onload = function(event) {
     //     console.log('File content:', event.target.result);
@@ -85,7 +82,7 @@ fetch('http://localhost:8080')
       console.log(elemento.detalle)
       console.log("esta es la imagen ", elemento.imagenurl);
       containerTarjeta.innerHTML += `
-        <div id="cargaDinamica"  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div id="cargaDinamica" OnClick='datosTarjeta("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">
           <img id="imgTarjeta" src=${elemento.imagenurl} class="card-img-top" alt="...">
           <div id="cuerpoTrajeta" class="card-body">
@@ -98,9 +95,15 @@ fetch('http://localhost:8080')
       </div>
         `
     })
+    setTimeout(()=>{
+
+      
+      const unaTrajeta = document.querySelectorAll("#unaTrajeta")
+      
+        console.log("este es unatrajeta: ",unaTrajeta, this)  
+    },1500)
+    
     
   });
 
-
- 
   

@@ -161,20 +161,47 @@ btnPerfil.addEventListener("click", ()=>{
 //carga una tarjeta en modal
 //tarjeta de informacion
 
-const unaTrajeta = document.querySelectorAll("#unaTrajeta")
 
-const imgTarjeta =document.querySelectorAll("#imgTarjeta")
-const cardTitle =document.querySelectorAll("#cardTitle")
-const cardText =document.querySelectorAll("#cardText")
+// const containerTarjeta = document.querySelector("#containerTarjeta")
+var datosParaModal = {}
+containerTarjeta.addEventListener("click", ()=>{
+ 
+  
+  // console.log("esta es una tarjeta =>", unaTrajeta)
 
+  
+  // const imgTarjeta = containerTarjeta.querySelector("#imgTarjeta").getAttribute("src")
+  // const titulo = containerTarjeta.querySelector("#cardTitle").textContent
+  // const cardText = containerTarjeta.querySelector("#cardText").textContent
+  // console.log(titulo, imgTarjeta, cardText )
+  // datosParaModal={
+  //   "publicacion":titulo,
+  //   "detalle": cardText,
+  //   "imgUrl": imgTarjeta
+  // }
+  // const exampleModal = document.querySelector("#exampleModal")
+  // console.log("carga dinamica es: ", exampleModal)
+  // const publicacionModal = exampleModal.querySelector("#publicacionModal")
+  // const detalleModal = exampleModal.querySelector("#detalleModal")
+  // const imgModal = exampleModal.querySelector("#imgTarjetaModal").getAttribute("src")
+  // console.log("datos del modal: ",publicacionModal, detalleModal, imgModal)
 
-var datosTarjetas = []
-unaTrajeta.addEventListener("click", ()=>{
-  console.log("una tarjeta")
-  this.push(cardTitle.innerText)
-})
-console.log(datosTarjetas)
+  // publicacionModal.textContent = datosParaModal.publicacion
+  // detalleModal.textContent = datosParaModal.detalle
+  // imgModal.setAttribute("src", datosParaModal.imgUrl)
+  
 
+  })
+  const datosTarjeta = (varPublicacion, varDetalle, varImagen)=>{
+    // console.log("si funcionaaaaaaa", var1,var2,var3)
+    const exampleModal = document.querySelector("#exampleModal")
+  console.log("modal es: ", exampleModal)
+  const publicacionModal = exampleModal.querySelector("#publicacionModal")
+  const detalleModal = exampleModal.querySelector("#detalleModal")
+  const imgModal = exampleModal.querySelector("#imgTarjetaModal")
+  console.log("datos del modal: ",publicacionModal, detalleModal, imgModal)
 
-
-
+  publicacionModal.textContent = varPublicacion
+  detalleModal.textContent = varDetalle
+  imgModal.setAttribute("src", varImagen)
+  }
