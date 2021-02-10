@@ -20,7 +20,7 @@
                     <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
                     <span class="nombre-app">
 
-                        Supply
+                        <!-- Supply -->
                     </span>
                    </div>
                     <div class="container-fluid">
@@ -52,7 +52,7 @@
 
 
     <div id="containerCarrousel" class="container-carrousel">
-      <a id="linkBotonPublicar" href="#"> <button type="button" id="botonPublicar" class="btn btn-secondary" style="">Busco un producto</button></a>
+      <a id="linkBotonPublicar" href="#"> <button type="button" id="botonPublicar" class="btn btn-secondary">Busco un producto</button></a>
       <div class="carrusel" style="height: auto;">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -86,10 +86,9 @@
                 <div class="menuBusqueda">
                     <h3>Busquedas publicadas</h3>
     
-                    <ul id="menuBusquedas" class="menu" data-animation="diagonal">
+                    <ul id="menuBusquedas" class="menu container-fluid" data-animation="diagonal">
                       <li>
-                        <a href="#0" style="    font-size: x-large;
-                        font-weight: bolder;">
+                        <a href="#0" class="SelectoresMenuBusqueda">
                           Todos
                           <span class="border border-top"></span>
                           <span class="border border-right"></span>
@@ -98,8 +97,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#0" style="    font-size: x-large;
-                        font-weight: bolder;">
+                        <a href="#0" class="SelectoresMenuBusqueda">
                           Productos
                           <span class="border border-top"></span>
                           <span class="border border-right"></span>
@@ -108,8 +106,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#0" style="    font-size: x-large;
-                        font-weight: bolder;">
+                        <a href="#0" class="SelectoresMenuBusqueda">
                           Servicios
                           <span class="border border-top"></span>
                           <span class="border border-right"></span>
@@ -202,9 +199,75 @@
     </div>
   </div>
 </div>
+<!-- fin del modal -->
+
+
+<!-- nuevomodal -->
+<!-- Button trigger modal -->
+<!-- <button type="button" id="cualquiercosa" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- pagina de carga -->
+<!-- <div id="cargando" class="d-flex justify-content-center loader">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div> -->
+<!-- //The core Firebase JS SDK is always required and must be listed first --> -->
 
 <!-- fin del modal -->
 
+<!-- barra busqueda -->
+<script>
+
+const barraBusqueda = document.querySelector('#barraBusqueda')
+  const botonBusqueda = document.querySelector('#botonBusqueda')
+
+  const filtrar = ()=> {
+    console.log(barraBusqueda.value);
+
+
+    const texto = barraBusqueda.value.toLowerCase();
+    for(let data of miDato){
+      let publicacion = data.publicacion
+      if (publicacion.indexOf(texto) !== -1) {
+        console.log('resultados en titulos: ',data.publicacion);
+      }
+
+      let detalle = data.detalle
+      if (detalle.indexOf(texto) !== -1) {
+        console.log('resultados en detalle: ',data.detalle);
+      }
+
+    }
+  
+  }
+  
+  botonBusqueda.addEventListener('click', filtrar)
+  
+  
+</script>
+
+<!-- barra busqueda  -->
 
 <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>

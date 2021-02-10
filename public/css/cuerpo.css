@@ -105,6 +105,12 @@
     /* margin-left: 30px; */
     font-size: x-large;
 }
+
+.nombre-app::before {
+    content: "Supply";
+}
+
+
 #imagenNavbar{
     width: 40px;
     height: 40px;
@@ -129,6 +135,13 @@
     width: 120px;
     z-index: 20000;
     display: none;
+
+    border-radius: 10px;
+    background-color: var(--celeste);
+    color: var(--claro);
+    border-color: var(--claro);
+    border-width: 2px;
+    font-weight: bold;
 }
 #btn-Perfil{
     position: absolute;
@@ -187,6 +200,12 @@
     font-size: xxx-large;
     margin-bottom: 2vh;
 }
+
+.SelectoresMenuBusqueda {
+    font-size: x-large;
+                        font-weight: bolder;
+}
+
  /* //tarjetas */
 
  #imgTarjeta {
@@ -302,14 +321,80 @@
 /* media query */
 
 
-@media screen and (max-width: 370px) {
+@media (max-width: 767px){
+
+
+    .menu {
+        /* display: flex;
+        justify-content: center;
+        width: fit-content; */
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+.menuBusqueda {
+    font-size: xx-large;
+}
+
+.menuBusqueda{
+    text-align: center;
+}
+.menuBusqueda h3{
+    font-size: 32px;
+}
+#unaTrajeta{
+    display: flex;
+    flex-direction: initial;
+    border-style: 0.3px;
+    border-radius: initial;
+    margin: 5px 0;
+}
+#imgTarjeta{
+    height: 88px;
+    width: 88px;
+}
+.busquedas{
+    padding: 0;
+}
+.busquedasPublicadas{
+    padding: 0;
+    width: 100%;
+}
+#containerTarjeta{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#cargaDinamica{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 580px) {
     #iniciarSesionRegistrarse{
         display: none;
     }
-    #menuBusquedas{
+    /* #menuBusquedas{
         text-align: center;
         display: block;
-    }
+    } */
     .menuBusqueda{
         text-align: center;
     }
@@ -324,7 +409,8 @@
         margin: 5px 0;
     }
     #imgTarjeta{
-        width: 40%;
+        height: 88px;
+        width: 88px;
     }
     .busquedas{
         padding: 0;
@@ -351,7 +437,7 @@
     padding: 0;
     
     }
-    #barraBusquedaContainer{
+    /* #barraBusquedaContainer{
         position: absolute;
     top: 371px;
     left: 1px;
@@ -365,5 +451,11 @@
     #exampleModal{
         z-index: 30000;
         width: 127%;
+    } */
+
+
+    .nombre-app::before {
+        content: "";
     }
+    
   }

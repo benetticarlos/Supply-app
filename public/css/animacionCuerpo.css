@@ -114,6 +114,47 @@
   .menu a:hover .border-left {
     transition-delay: calc(var(--transition-delay) * 3);
   }
+
+
+
+  @media (max-width: 767px){
+
+
+    .menu {
+        /* display: flex;
+        justify-content: center;
+        width: fit-content; */
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+    }
+
+    @media (max-width: 580px) {
+.menu {
+  width: 100%;
+    padding-right: 0;
+}
+
+
+      .menu li {
+        margin-right: 15px;
+    }
+
+    .menu a {
+      position: relative;
+      display: block;
+      padding: 10px;
+      font-size: 1.2rem;;
+  }
+
+
+    }
+
+
+
+
   
   
   /* ANIMATIONS

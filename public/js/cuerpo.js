@@ -68,7 +68,7 @@ const verificarEstadoLogin = ()=>{
     } else {
         //si no esta logueado o se desloguea
          console.log("usuario nullo, deslogueado, f change");
-        
+         linkBotonPublicar.style.display="none"
         
         linkBotonPublicar.href = "./login.html"  
         
@@ -160,7 +160,28 @@ btnPerfil.addEventListener("click", ()=>{
 
 //carga una tarjeta en modal
 
-var datosParaModal = {}
+// var datosParaModal = {}
+// const unaTrajeta = document.querySelectorAll("#unaTrajeta")
+
+// const imgTarjeta =document.querySelectorAll("#imgTarjeta")
+// const cardTitle =document.querySelectorAll("#cardTitle")
+// const cardText =document.querySelectorAll("#cardText")
+
+
+
+// const modalPublicacion =document.querySelector("#exampleModal")
+
+// modalPublicacion.addEventListener("click", ()=>{
+//   console.log("click Modal")
+// })
+
+
+// var datosTarjetas = []
+// unaTrajeta.addEventListener("click", ()=>{
+//   console.log("una tarjeta")
+//   this.push(cardTitle.innerText)
+// })
+// console.log(datosTarjetas)
 
 //containerTarjeta no utilizado ya que se utilizo una funcion lanzada desde la tarjeta
 containerTarjeta.addEventListener("click", ()=>{

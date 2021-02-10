@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -16,16 +17,28 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand contenedor-navbar" href="#">
+                
+                
+                
                 <div onclick="window.location.href='cuerpo.html'">
-                    <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
+
+                    
+
+            <img src="./images/logo.png" alt="" width="30" height="24" class="d-inline-block align-top">
+                    
+                    
                     <span class="nombre-app">
+
                         Supply
                     </span>
+                
+                
                 </div>
+
+<!-- 
                 <div class="container-fluid">
                     <form class="d-flex">
-                        <input class="controlForm form-control me-2" type="search" placeholder="Search"
-                            aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
@@ -33,16 +46,23 @@
                     <button type="button" class="btn-navbar btn ">Categorias</button>
                     <button type="button" class="btn-navbar btn ">Favoritos</button>
                 </div>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
+                <div id="imagenNavbarPerfilConteiner">
+                    <img id="imagenNavbarPerfil" src="./images/avatares/avatarH1.svg" alt=""> 
+                    <!-- <button id="btn-cerrarSesion" type="button" class="btn btn-outline-secondary">Cerrar Sesion</button>
+                    <button id="btn-Perfil" type="button" class="btn btn-outline-secondary">Perfil</button> -->
+                  </div>
             </a>
+
         </div>
     </nav>
 
-    <div class="container" style="display: flex; height: 115vh;">
+    <div class="container" style="    height: auto;">
         <section class="form-productos">
             <form action="" id="formularioServicio">
                 <div class="mb-3">
@@ -101,7 +121,7 @@
                 </div>
         </section>
         <div class="imagen-descarga">
-            <h4>Agregá una imagen (opcional)</h4>
+            <h4></h4>
             <div class="imagen-opcional">
                 <div class="imagenSRC">
                     <img src="" class="img-fluid" id="pruebasrc" alt="">
@@ -111,20 +131,34 @@
                 width: 100%;
                 display: contents;
             ">
-                    <img src="./images/iconoDescarga.svg" alt="" id="iconoDescarga" class="iconoDescarga" style="
-                    /* box-sizing: border-box; */
-                    margin-left: 2.4vw;
-                    margin-top: 4vh;
-                ">
+                    <img src="./images/iconoDescarga.svg" alt="" id="iconoDescarga" class="iconoDescarga" >
                 </label>
             </div>
             <div class="boton-publicarBusqueda">
                 <button id="botonPublicarBusqueda" type="submit" class="btn-buscar btn btn-secondary"
-                    style="width: fit-content;">Publicar busqueda</button>
+                    style="width: fit-content;"></button>
             </div>
             </form>
         </div>
     </div>
+
+    <div class="form-check">
+        <input class="form-check-input" name="EsUnServicio" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+        <label class="form-check-label" for="flexCheckCheckedDisabled">
+          Disabled checked checkbox
+        </label>
+      </div>
+
+
+              <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    
+        <!-- Add the entire Firebase JavaScript SDK -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
+      
+      
+
+
+
     <script src="./js/cargarServicio.js"></script>
 </body>
 </html>
