@@ -137,29 +137,7 @@ btnPerfil.addEventListener("click", () => {
   location.href = "http://localhost:8080/perfil.html";
 });
 
-//carga una tarjeta en modal
 
-// var datosParaModal = {}
-// const unaTrajeta = document.querySelectorAll("#unaTrajeta")
-
-// const imgTarjeta =document.querySelectorAll("#imgTarjeta")
-// const cardTitle =document.querySelectorAll("#cardTitle")
-// const cardText =document.querySelectorAll("#cardText")
-
-// const modalPublicacion =document.querySelector("#exampleModal")
-
-// modalPublicacion.addEventListener("click", ()=>{
-//   console.log("click Modal")
-// })
-
-// var datosTarjetas = []
-// unaTrajeta.addEventListener("click", ()=>{
-//   console.log("una tarjeta")
-//   this.push(cardTitle.innerText)
-// })
-// console.log(datosTarjetas)
-
-//containerTarjeta no utilizado ya que se utilizo una funcion lanzada desde la tarjeta
 containerTarjeta.addEventListener("click", () => {
   // console.log("esta es una tarjeta =>", unaTrajeta)
   // const imgTarjeta = containerTarjeta.querySelector("#imgTarjeta").getAttribute("src")
@@ -183,7 +161,7 @@ containerTarjeta.addEventListener("click", () => {
 });
 
 //funcion lanzada desde la tarjeta para editar el modal, valores vienen desde script.js
-const editarDatosModal = (varPublicacion, varDetalle, varImagen) => {
+const editarDatosModal = (varPublicacion, varDetalle, varImagen, varPrecio, varCondicion, varRubro) => {
   //capturo modal
   const exampleModal = document.querySelector("#exampleModal");
 
@@ -191,10 +169,16 @@ const editarDatosModal = (varPublicacion, varDetalle, varImagen) => {
   const publicacionModal = exampleModal.querySelector("#publicacionModal");
   const detalleModal = exampleModal.querySelector("#detalleModal");
   const imgModal = exampleModal.querySelector("#imgTarjetaModal");
+  const spanPrecio = exampleModal.querySelector("#spanPrecio");
+  const spanCondicion = exampleModal.querySelector("#spanCondicion");
+  const spanRubro = exampleModal.querySelector("#spanRubro");
 
   //edito los valores del modal, con valores que recibe la funcion de la tarjeta seleccionada, evita usar this
   publicacionModal.textContent = varPublicacion;
   detalleModal.textContent = varDetalle;
   //forma para editar atributos
   imgModal.setAttribute("src", varImagen);
+  spanPrecio.textContent = varPrecio
+  spanCondicion.textContent = varCondicion
+  spanRubro.textContent = varRubro
 };

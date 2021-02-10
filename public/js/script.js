@@ -57,7 +57,7 @@ fetch("http://localhost:8080")
       // console.log("esta es la imagen ", elemento.imagenurl);
       console.log(elemento.precio);
       containerTarjeta.innerHTML += `
-        <div id="cargaDinamica" OnClick='editarDatosModal("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div id="cargaDinamica" OnClick='editarDatosModal("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}","${elemento.precio}","${elemento.condicion}","${elemento.rubro}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">
           <div id="publicacionBandera" style="display:none">${elemento.id}</div>
           <img id="imgTarjeta" src=${elemento.imagenurl} class="card-img-top" alt="...">
