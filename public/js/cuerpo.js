@@ -68,7 +68,7 @@ const verificarEstadoLogin = ()=>{
     } else {
         //si no esta logueado o se desloguea
          console.log("usuario nullo, deslogueado, f change");
-        
+         linkBotonPublicar.style.display="none"
         
         linkBotonPublicar.href = "./login.html"  
         
@@ -168,12 +168,21 @@ const cardTitle =document.querySelectorAll("#cardTitle")
 const cardText =document.querySelectorAll("#cardText")
 
 
+
+const modalPublicacion =document.querySelector("#exampleModal")
+
+modalPublicacion.addEventListener("click", ()=>{
+  console.log("click Modal")
+})
+
+
 var datosTarjetas = []
 unaTrajeta.addEventListener("click", ()=>{
   console.log("una tarjeta")
   this.push(cardTitle.innerText)
 })
 console.log(datosTarjetas)
+
 
 
 

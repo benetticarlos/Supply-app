@@ -87,6 +87,7 @@ fetch('http://localhost:8080')
       containerTarjeta.innerHTML += `
         <div id="cargaDinamica"  class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">
+          <div id="publicacionBandera" style="display:none">${elemento.id}</div>
           <img id="imgTarjeta" src=${elemento.imagenurl} class="card-img-top" alt="...">
           <div id="cuerpoTrajeta" class="card-body">
             <h5 id="cardTitle" class="card-title">${elemento.publicacion}</h5>
