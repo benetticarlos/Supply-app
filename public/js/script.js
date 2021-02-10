@@ -38,23 +38,6 @@
 //rellenando tarjetas
 const containerTarjeta = document.querySelector("#containerTarjeta")
 
-// tarjetasBusquedas.forEach((elemento, indicea, array)=>{
-//   console.log(elemento.img)
-//   containerTarjeta.innerHTML += `
-//   <div  id="tarjetaConteiner" class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
-//   <div id="unaTrajeta" class="card">
-//     <img id="imgTarjeta" src=${elemento.img} class="card-img-top" alt="...">
-//     <div id="cuerpoTrajeta" class="card-body">
-//       <h5 class="card-title">${elemento.publicacion}</h5>
-//       <p class="card-text">
-//         ${elemento.detalle}
-//       </p>
-      
-//     </div>
-//   </div>
-// </div>
-//   `
-// })
 
 
 //direccionar una pagina
@@ -75,14 +58,12 @@ fetch('http://localhost:8080')
    
    data.forEach(elemento => {
 
-    //   reader.onload = function(event) {
-    //     console.log('File content:', event.target.result);
-    // };
+    
       console.log(elemento.id)
       console.log(elemento.detalle)
       console.log("esta es la imagen ", elemento.imagenurl);
       containerTarjeta.innerHTML += `
-        <div id="cargaDinamica" OnClick='datosTarjeta("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div id="cargaDinamica" OnClick='editarDatosModal("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">
           <img id="imgTarjeta" src=${elemento.imagenurl} class="card-img-top" alt="...">
           <div id="cuerpoTrajeta" class="card-body">
@@ -95,15 +76,6 @@ fetch('http://localhost:8080')
       </div>
         `
     })
-    setTimeout(()=>{
-
-      
-      const unaTrajeta = document.querySelectorAll("#unaTrajeta")
-      
-        console.log("este es unatrajeta: ",unaTrajeta, this)  
-    },1500)
-    
-    
   });
 
   

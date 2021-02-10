@@ -159,11 +159,10 @@ btnPerfil.addEventListener("click", ()=>{
 
 
 //carga una tarjeta en modal
-//tarjeta de informacion
 
-
-// const containerTarjeta = document.querySelector("#containerTarjeta")
 var datosParaModal = {}
+
+//containerTarjeta no utilizado ya que se utilizo una funcion lanzada desde la tarjeta
 containerTarjeta.addEventListener("click", ()=>{
  
   
@@ -192,16 +191,21 @@ containerTarjeta.addEventListener("click", ()=>{
   
 
   })
-  const datosTarjeta = (varPublicacion, varDetalle, varImagen)=>{
-    // console.log("si funcionaaaaaaa", var1,var2,var3)
-    const exampleModal = document.querySelector("#exampleModal")
-  console.log("modal es: ", exampleModal)
-  const publicacionModal = exampleModal.querySelector("#publicacionModal")
-  const detalleModal = exampleModal.querySelector("#detalleModal")
-  const imgModal = exampleModal.querySelector("#imgTarjetaModal")
-  console.log("datos del modal: ",publicacionModal, detalleModal, imgModal)
 
-  publicacionModal.textContent = varPublicacion
-  detalleModal.textContent = varDetalle
-  imgModal.setAttribute("src", varImagen)
+  //funcion lanzada desde la tarjeta para editar el modal, valores vienen desde script.js
+  const editarDatosModal = (varPublicacion, varDetalle, varImagen)=>{
+      
+      //capturo modal
+      const exampleModal = document.querySelector("#exampleModal")
+      
+      //capturo los elementos detro del modal
+      const publicacionModal = exampleModal.querySelector("#publicacionModal")
+      const detalleModal = exampleModal.querySelector("#detalleModal")
+      const imgModal = exampleModal.querySelector("#imgTarjetaModal")
+      
+      //edito los valores del modal, con valores que recibe la funcion de la tarjeta seleccionada, evita usar this
+      publicacionModal.textContent = varPublicacion
+      detalleModal.textContent = varDetalle
+      //forma para editar atributos
+      imgModal.setAttribute("src", varImagen)
   }
