@@ -1,8 +1,8 @@
-    /* formularioProducto */
+/* formularioProducto */
 
 .container {
-    display: flex;
-    height: auto;
+  display: flex;
+  height: auto;
 }
 /* 
 .nombre-app:before {
@@ -10,230 +10,197 @@
 } */
 
 .btn-navbar:before {
-    content: none;
+  content: none;
 }
 
-
-
-
-   #formularioProducto {
-    margin-bottom: 4rem;
-   }
-
-   #formularioServicio {
-       margin-bottom: 4rem;
-   }
-
-    .form-productos{
-        width: 42%;
-        margin-right: 10vw;
-    margin-left: 6vw;
-    margin-top:  2rem;
-    }
-
-    .labelForm {
-        color: #eeeeee;
-        
-    font-size: 1.8rem;
-    font-weight: bolder;
-
-    }
-
-    .labelCheckForm {
-        color: #eeeeee;
-    }
-
-    .controlForm {
-        width: 90%;
-    }
-
-    .selectForm{
-        width: 90%;
-    }
-
-    .imagen-descarga {
-        
-    margin-top: 3rem;
-
-    }
-
-    .imagen-descarga h4:before{
-        color: #eeeeee;
-        content: "agregá una imagen (opcional)";
-    }
-
-    .imagen-opcional {
-        background-color: #eeeeee;
-        width: 12.337rem;
-        height: 12.337rem;
-        display: flex;
-        border-radius: 30px;
-        
-    margin: auto;
-    margin-top: 2.468rem;
-    margin-bottom: 0.705rem;
-
-    
-    }
-
-    .imagensrc {
-        position: relative;
-        width: 100%;
-        text-align: center;
-    }
-
-#pruebasrc{
-    position: relative;
-    
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-
+#formularioProducto {
+  margin-bottom: 4rem;
 }
 
+#formularioServicio {
+  margin-bottom: 4rem;
+}
 
-    #ingresarImagenBoton {
-        width: 100%;
-        display: flex;
-    }
-    
-    .iconoDescarga {
-        width: 8.46rem;
-        margin: auto;
+.form-productos {
+  width: 42%;
+  margin-right: 10vw;
+  margin-left: 6vw;
+  margin-top: 2rem;
+}
 
-                    margin-left: 2.4vw;
-                    margin-top: 4vh;
+.labelForm {
+  color: #eeeeee;
 
-    }
-    
-    .iconoDescarga:hover {
-        cursor:pointer;
-    }
-    .boton-publicarBusqueda {
-        width: fit-content;
-        margin: auto;
-        margin-top: 8.813rem;
-    }
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
 
+.labelCheckForm {
+  color: #eeeeee;
+}
 
-    #botonPublicarBusqueda:before{
-        content: "Publicar busqueda";
-      }
-      
+.controlForm {
+  width: 90%;
+}
 
-      /* @media (max-width:400px){
+.selectForm {
+  width: 90%;
+}
+
+.imagen-descarga {
+  margin-top: 3rem;
+}
+
+.imagen-descarga h4:before {
+  color: #eeeeee;
+  content: "agregá una imagen (opcional)";
+}
+
+.imagen-opcional {
+  background-color: #eeeeee;
+  border-radius: 30px;
+  display: flex;
+  height: 12.337rem;
+  width: 12.337rem;
+  margin-bottom: 0.705rem;
+  margin-top: 2.468rem;
+  margin: auto;
+}
+
+.imagensrc {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+#pruebasrc {
+  position: relative;
+
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#ingresarImagenBoton {
+  width: 100%;
+  display: flex;
+}
+
+.iconoDescarga {
+  width: 8.46rem;
+  margin: auto;
+
+  margin-left: 2.4vw;
+  margin-top: 4vh;
+}
+
+.iconoDescarga:hover {
+  cursor: pointer;
+}
+.boton-publicarBusqueda {
+  width: fit-content;
+  margin: auto;
+  margin-top: 8.813rem;
+}
+
+#botonPublicarBusqueda:before {
+  content: "Publicar busqueda";
+}
+
+/* @media (max-width:400px){
         #botonPublicarBusqueda:before {
             content: "AAA";
         } */
 
+/* medias queries */
+@media (min-width: 580px) and (max-width: 768px) {
+  /* @media (max-width: 768px) {  */
+  .container {
+    /* font-size: 1vw; */
+  }
 
-    
-    /* medias queries */
-    @media (min-width: 580px) and (max-width: 768px)    {
-/* @media (max-width: 768px) {  */
-    .container{
-        /* font-size: 1vw; */
-    }
+  #botonPublicarBusqueda:before {
+    content: "publicar";
+  }
 
+  .imagen-opcional {
+    width: 8.337rem;
+    height: 8.337rem;
+  }
 
-        #botonPublicarBusqueda:before {
-            content: "publicar";
-        }
-    
-    .imagen-opcional {
-        width: 8.337rem;
-    height: 8.337rem
-    }
-
-
-    .iconoDescarga{
-     margin-left: none; 
-     margin-top: none;
+  .iconoDescarga {
+    margin-left: none;
+    margin-top: none;
 
     width: 4.46rem;
-    margin: auto
-    }
+    margin: auto;
+  }
 
-    .labelForm{
-        font-size: 1.3rem;
-        font-weight: initial;
-    }
+  .labelForm {
+    font-size: 1.3rem;
+    font-weight: initial;
+  }
 
-    .imagen-descarga h4:before {
-        content: "imagen (opcional)";
-    }
+  .imagen-descarga h4:before {
+    content: "imagen (opcional)";
+  }
 
-    .form-productos {
-        width: 51%;
-        margin-right: 16vw;
-        margin-left: 2vw;
-        margin-top: 2rem;
-    }
-
-
-    
-    
-    
-    
-    
-}    
-@media (max-width: 580px) {
-.container {
-    display: block;
+  .form-productos {
+    width: 51%;
+    margin-right: 16vw;
+    margin-left: 2vw;
+    margin-top: 2rem;
+  }
 }
+@media (max-width: 580px) {
+  .container {
+    display: block;
+  }
 
-.form-productos {
+  .form-productos {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
-}
+  }
 
-
-
-#botonPublicarBusqueda:before {
+  #botonPublicarBusqueda:before {
     content: "publicar";
-}
+  }
 
-.imagen-opcional {
-width: 8.337rem;
-height: 8.337rem
-}
+  .imagen-opcional {
+    width: 8.337rem;
+    height: 8.337rem;
+  }
 
+  .iconoDescarga {
+    margin-left: none;
+    margin-top: none;
 
-.iconoDescarga{
-margin-left: none; 
-margin-top: none;
+    width: 4.46rem;
+    margin: auto;
+  }
 
-width: 4.46rem;
-margin: auto
-}
+  .labelForm {
+    font-size: 1.3rem;
+    font-weight: initial;
+  }
 
-.labelForm{
-font-size: 1.3rem;
-font-weight: initial;
-}
+  .imagen-descarga h4:before {
+    content: "imagen (opcional)";
+  }
 
-.imagen-descarga h4:before {
-content: "imagen (opcional)";
-}
-
-/* .form-productos {
+  /* .form-productos {
 width: 51%;
 margin-right: 16vw;
 margin-left: 2vw;
 margin-top: 2rem;
 } */
 
-
-/* .nombre-app:before {
+  /* .nombre-app:before {
     content: '';
 } */
 
-.boton-publicarBusqueda {
+  .boton-publicarBusqueda {
     margin-top: 4.813rem;
+  }
 }
-
-
-
-}
-

@@ -5,122 +5,116 @@
 } */
 
 .titulo-busqueda {
-    box-sizing: border-box;
-    height: fit-content;
-    color: #eeeeee;
-    text-align: center;
-    margin-top: 7vh;
-    margin-bottom: 10vh;
-    font-size: 2.7rem;
+  box-sizing: border-box;
+  height: fit-content;
+  color: #eeeeee;
+  text-align: center;
+  margin-top: 7vh;
+  margin-bottom: 10vh;
+  font-size: 2.7rem;
 }
 
-
 .seleccion {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    }
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
 .buscoProducto {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    }
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
 
 .buscoServicio {
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    }
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
 
-    .iconoBusqueda {
-        background-color: #eeeeee;
-    border-radius: 10%;
-    margin: auto;
-    width: 15vw
-    }
+.iconoBusqueda {
+  background-color: #eeeeee;
+  border-radius: 10%;
+  margin: auto;
+  width: 15vw;
+}
 
-    .botonBusqueda {
-        margin-top: 6vh;
-    }
+.botonBusqueda {
+  margin-top: 6vh;
+}
 
-    .btn-buscar {
-        font-size: 2rem;
-        width: 160px;
-        border-radius: 10px;
-        
-    }
-    .btn-buscar {
-        background-color: var(--celeste);
-        color: var(--oscuro);
-        border-color: var(--celeste);
-        
-        border-width: 3px;
-    }
-    .btn-buscar:hover {
-        border-color: var(--celeste);
-        color:var(--celeste);
-        border-width: 3px;
-        background-color: var(--oscuro);
-    }
+.btn-buscar {
+  font-size: 2rem;
+  width: 160px;
+  border-radius: 10px;
+}
+.btn-buscar {
+  background-color: var(--celeste);
+  color: var(--oscuro);
+  border-color: var(--celeste);
 
-    #btnBuscoProducto::before {
-        content: "Busco un producto" ;
-    }
+  border-width: 3px;
+}
+.btn-buscar:hover {
+  border-color: var(--celeste);
+  color: var(--celeste);
+  border-width: 3px;
+  background-color: var(--oscuro);
+}
 
-    #btnBuscoServicio::before {
-        content: "Busco un servicio" ;
-    }
+#btnBuscoProducto::before {
+  content: "Busco un producto";
+}
 
+#btnBuscoServicio::before {
+  content: "Busco un servicio";
+}
 
+@media (max-width: 580px) {
+  .titulo-busqueda {
+    font-size: 2rem;
+  }
 
-    @media (max-width: 580px) {
+  #btnBuscoProducto::before {
+    content: "Producto";
+  }
 
-        .titulo-busqueda{
-            font-size: 2rem;
-        }
+  #btnBuscoServicio::before {
+    content: "Servicio";
+  }
 
-        #btnBuscoProducto::before {
-            content: "Producto" ;
-        }
-    
-        #btnBuscoServicio::before {
-            content: "Servicio" ;
-        }
+  .iconoBusqueda {
+    width: 6rem;
+  }
 
-        .iconoBusqueda {
-            width: 6rem;
-        }
-
-        /* .nombre-app:before {
+  /* .nombre-app:before {
             content: '';
         } */
-
-    }
+}

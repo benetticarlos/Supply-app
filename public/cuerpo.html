@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./js/menu.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cuerpo.css">
     <link rel="stylesheet" href="./css/animacionCuerpo.css">
@@ -52,7 +53,7 @@
 
 
     <div id="containerCarrousel" class="container-carrousel">
-      <a id="linkBotonPublicar" href="#"> <button type="button" id="botonPublicar" class="btn btn-secondary"></button>Publicar busqueda</button></a>
+      <a id="linkBotonPublicar" href="#"> <button type="button" id="botonPublicar" class="btn btn-secondary">Publicar busqueda</button></a>
       <div class="carrusel" style="height: auto;">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -70,6 +71,7 @@
           
       </div>
       <!-- fin carrusel -->
+     
       <div class="container">
 
           <div class="cuerpo">
@@ -87,7 +89,7 @@
     
                     <ul id="menuBusquedas" class="menu container-fluid" data-animation="diagonal">
                       <li>
-                        <a href="#0" class="SelectoresMenuBusqueda">
+                        <a href="#0" class="SelectoresMenuBusqueda" id="MenuTodos">
                           Todos
                           <span class="border border-top"></span>
                           <span class="border border-right"></span>
@@ -96,7 +98,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#0" class="SelectoresMenuBusqueda">
+                        <a href="#0" class="SelectoresMenuBusqueda" id="MenuProductos">
                           Productos
                           <span class="border border-top"></span>
                           <span class="border border-right"></span>
@@ -105,7 +107,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#0" class="SelectoresMenuBusqueda">
+                        <a href="#" class="SelectoresMenuBusqueda" id="MenuServicios">
                           Servicios
                           <span class="border border-top"></span>
                           <span class="border border-right"></span>
@@ -116,7 +118,7 @@
                   </ul>
                 </div>
     
-                <div class="busquedasPublicadas">
+                <div class="busquedasPublicadas" id="busquedasPublicadas">
                     <!--inicio tarjeta-->
                     <div id="containerTarjeta" class="row row-cols-1 row-cols-md-3 g-4">
                       <!-- rellena con javascript -->
@@ -147,16 +149,16 @@
                     <div id="cardBody" class="card-body">
                       <div id="cardCaja" class="card w-100 h-50">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <h5 class="card-title"></h5>
+                          <p id="publicacionModal" class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                          
                         </div>
                       </div>
                       
                       <div id="cardCaja" class="card w-100 h-50">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <h5 class="card-title"></h5>
+                          <p id="detalleModal" class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                           
                         </div>
                       </div>
@@ -199,6 +201,32 @@
   </div>
 </div>
 <!-- fin del modal -->
+
+
+<!-- nuevomodal -->
+<!-- Button trigger modal -->
+<!-- <button type="button" id="cualquiercosa" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
 <!-- pagina de carga -->
 <!-- <div id="cargando" class="d-flex justify-content-center loader">
   <div class="spinner-border" role="status">
@@ -207,6 +235,7 @@
 </div> -->
 <!-- //The core Firebase JS SDK is always required and must be listed first --> -->
 
+<!-- fin del modal -->
 
 <!-- barra busqueda -->
 <script>
