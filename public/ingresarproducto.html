@@ -62,7 +62,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" style="    height: auto;">
         <section class="form-productos">
             <form action="http://localhost:8080/ingresarproducto" id="formularioProducto">
                 <div class="mb-3">
@@ -132,6 +132,20 @@
         </div>
     </div>
 
+    <div class="form-check" hidden>
+        <input class="form-check-input" name="EsUnProducto" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+        <label class="form-check-label" for="flexCheckCheckedDisabled">
+          Disabled checked checkbox
+        </label>
+      </div>
+
+
+              <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    
+        <!-- Add the entire Firebase JavaScript SDK -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
+      
+      
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/cargarProducto.js"></script>

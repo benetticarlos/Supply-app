@@ -1,67 +1,95 @@
-          // Your web app's Firebase configuration
-          var firebaseConfig = {
-            apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
-            authDomain: "localstorage-e6721.firebaseapp.com",
-            projectId: "localstorage-e6721",
-            storageBucket: "localstorage-e6721.appspot.com",
-            messagingSenderId: "719797837765",
-            appId: "1:719797837765:web:6cf7cce3a249d07edbf5ac"
-          };
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCmRFONWKjnYGHrny9AqeXqJS7FxfC4R9E",
+    authDomain: "localstorage-e6721.firebaseapp.com",
+    projectId: "localstorage-e6721",
+    storageBucket: "localstorage-e6721.appspot.com",
+    messagingSenderId: "719797837765",
+    appId: "1:719797837765:web:6cf7cce3a249d07edbf5ac",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
+function iniciar() {
+    var ultimoId = "";
+    fetch("http://localhost:8080/ultimoId")
+        .then((response) => response.json())
+        .then((data) => {
+            data.forEach((elemento) => {
+                elemento.UId;
+                maxId = elemento.UId;
+                console.log(maxId);
 
+                nombreImagen = "imagen" + (maxId + 1);
 
-var imagenurl  = document.getElementById('imagenurl')
+                console.log("este es el nombre: ", nombreImagen);
 
-imagenurl.addEventListener('change', function (e) {
+                var imagenurl = document.getElementById("imagenurl");
 
-    //tomar archivo
-    var archivo = e.target.files[0];
+                imagenurl.addEventListener("change", function (e) {
+                    //tomar archivo
+                    var archivo = e.target.files[0];
 
+                    //crear referencia storage
+                    var storageRef = firebase.storage().ref("imagenes/" + nombreImagen);
 
-    //crear referencia storage
-    var storageRef = firebase.storage().ref('imagenes/' + archivo.name)
+                    // subir archivo
+                    storageRef.put(archivo);
 
-    // subir archivo
-    storageRef.put(archivo)
-})
+                    console.log("imagen subida a firebase");
 
-var boton = document.getElementById('boton')
+                    var miImagen = document.getElementById("miImagen");
 
-boton.addEventListener('click', function () {
-    
-    var ultimoId = ''
-    fetch('http://localhost:8080/ultimoId')
-    .then(response => response.json())
-    .then(data =>{
-        data.forEach(elemento =>{ elemento.UId
-            maxId = elemento.UId
-            console.log(maxId);
-        })
-    .then(ultimoId = maxId)
-    console.log(maxId);
-    })
-    console.log("Este es mi ultimo id: ", elemento.UId);
-})
+                    miImagen.src = `https://firebasestorage.googleapis.com/v0/b/localstorage-e6721.appspot.com/o/imagenes%2F${nombreImagen}?alt=media&token=9c172991-c595-4817-82a5-589496d554e1`;
+                });
+            });
+        });
+}
 
+window.onload = iniciar;
 
-// window.onload = inicializar
+// var imagenurl  = document.getElementById('imagenurl')
 
-// var upload;
-// // var storageRef
+// imagenurl.addEventListener('change', function (e) {
 
-// function inicializar() {
-//     upload = document.getElementById('upload')
-//     upload.addEventListener("change", subirImagenAFirebase, false)
+//     //tomar archivo
+//     var archivo = e.target.files[0];
 
+//     //crear referencia storage
+//     var storageRef = firebase.storage().ref('imagenes/' + archivo.name)
 
-//     var storageRef = firebase.storage().ref();
-// }
+//     // subir archivo
+//     storageRef.put(archivo)
 
-// function subirImagenAFirebase() {
-//     var imagenASubir = upload.files[0];
+//     console.log("imagen subida a firebase");
 
-//     var uploadTask = storageRef.put(imagenASubir)
+// })
 
-// }
+// var boton = document.getElementById('boton')
+
+// boton.addEventListener('click', function () {
+
+// //-----------------Funcion que encuentra el ultimo ID ----------------
+
+//     var ultimoId = ''
+//     fetch('http://localhost:8080/ultimoId')
+//     .then(response => response.json())
+//     .then(data =>{
+//         data.forEach(elemento =>{ elemento.UId
+//             maxId = elemento.UId
+//             console.log(maxId);
+
+// // hago que ei ID sea 1 mayor y lo asigno a miImagen
+
+//             nombreImagen = "imagen" + (maxId + 1)
+
+//             console.log("este es el nombre: ",nombreImagen);
+
+//             var miImagen = document.getElementById("miImagen")
+
+//             miImagen.src = "https://firebasestorage.googleapis.com/v0/b/localstorage-e6721.appspot.com/o/imagenes%2Fbolsitas.jpg?alt=media&token=9c172991-c595-4817-82a5-589496d554e1"
+
+//         })
+// })
+
+// })
