@@ -58,6 +58,7 @@ formularioProducto.addEventListener("submit", function (e) {
         rubro: "",
         condicion: condicionCheck,
         idusuario: "",
+        tipo: "producto"
     };
 
     fetch("http://localhost:8080/ingresarproducto", {

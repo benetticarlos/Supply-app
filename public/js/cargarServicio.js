@@ -57,6 +57,7 @@ formularioServicio.addEventListener("submit", function (e) {
         rubro: rubro,
         condicion: "",
         idusuario: "",
+        tipo: "servicio"
     };
 
     fetch("http://localhost:8080/ingresarproducto", {

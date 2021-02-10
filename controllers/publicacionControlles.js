@@ -33,8 +33,8 @@ const obtenerIdUltimaPublicacion = (req, res)=>{
 
 const agregarPublicacion = (req, res)=>{
    console.log("este es el rec body :", req.body)
-   const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario} = req.body
-    conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`) VALUES (?,?,?,?,?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario],(err, result)=>{
+   const {id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario, tipo} = req.body
+    conexion_db.query('INSERT INTO `publicacion_t`(`id`, `publicacion`, `detalle`, `precio`, `zona`, `imagenurl`, `rubro`, `condicion`, `idusuario`, `tipo`) VALUES (?,?,?,?,?,?,?,?,?,?)', [id, publicacion, detalle, precio, zona, imagenurl, rubro, condicion, idusuario, tipo],(err, result)=>{
         if(err){
             throw err
         
@@ -45,6 +45,20 @@ const agregarPublicacion = (req, res)=>{
             }
         })
 }
+
+const agregarPerfil = (req, res)=>{
+    const {id, email, telefono, urlavatar, acercaDe} = req.body
+    conexion_db.query('INSERT INTO `usuario_t`(`id`, `email`, `telefono`, `urlavatar`, `acercaDe`) VALUES (?,?,?,?,?)', [id, email, telefono, urlavatar, acercaDe ], (err, result =>{
+        if (err) {
+            throw err
+        } else {
+            
+                console.log(result);
+                res.send("alta exitosa")
+        }
+    }))
+}
+
 
 
 const agregarImagen = (req, res) => {
@@ -105,7 +119,7 @@ const agregarComentario = (req, res)=>{
                             throw err
                         
                         }else {           
-                           
+                        
                                 console.log(result)
                             }
                         })
@@ -149,6 +163,7 @@ module.exports = {
                  borrarComentario,
                  editarComentario,
                  obtenerIdUltimaPublicacion,
-                 agregarImagen
+                 agregarImagen,
+                 agregarPerfil
             }
   
