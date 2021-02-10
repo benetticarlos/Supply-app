@@ -178,5 +178,59 @@ console.log(datosTarjetas)
 
 
 
+// Cambio de avatar         --------------------- NO FUNCIONA --------------------------
+
+// var imagenNavbarPerfilCambio = document.getElementById("imagenNavbarPerfilCambio")
+
+// var avatarH1 = document.getElementById("avatarH1")
+// var avatarM1 = document.getElementById("avatarM1")
+// let avatarH2 = document.getElementById("avatarH2")
+// let avatarM2 = document.getElementById("avatarM2")
+// let avatarH3 = document.getElementById("avatarH3")
+// let avatarM3 = document.getElementById("avatarM3")
+
+// // avatarH1.addEventListener('click', () => {
+// //   var avatarH1 = document.getElementById("avatarH1")
+// //   imagenNavbarPerfilCambio.src = avatarH1.src
+// //   console.log("clickiaste el avatar");
+// // })
+
+// avatarH1.onclick = function () {
+//   imagenNavbarPerfilCambio.src = "./images/avatares/avatarH1.svg"
+// }
+
+// // function cambiarH1() {
+// //   avatarDePerfilCambio.src = avatarH1
+// // }
+
+// function cambiarM1() {
+//   avatarDePerfil = avatarM2
+// }
+
+// avatarM1.addEventListener('click', () => {
+//   avatarDePerfil.src = avatarM1
+// })
+
+
+// avatarH1.addEventListener('click', () => {
+//   avatarDePerfil.src = avatarH1
+// })
+
+
+// avatarH1.addEventListener('click', () => {
+//   avatarDePerfil.src = avatarH1
+// })
+
+
+// avatarH1.addEventListener('click', () => {
+//   avatarDePerfil.src = avatarH1
+// })
+
+
+// avatarH1.addEventListener('click', () => {
+//   avatarDePerfil.src = avatarH1
+// })
+
+//------------------------------------------------------------------------------------------------------
 
 

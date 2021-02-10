@@ -140,5 +140,5 @@ const botonPublicarBusqueda = document.querySelector("#botonPublicarBusqueda");
 botonPublicarBusqueda.addEventListener("click", () => {
     setTimeout(() => {
         location.href = "http://localhost:8080/cuerpo.html";
-    }, 3000);
+    }, 500);
 });
