@@ -16,6 +16,32 @@ const obtenerPublicacion = (req, res)=>{
         }
     })
 }
+const obtenerPublicacionServicios = (req, res)=>{
+    
+    conexion_db.query('SELECT `id`,`publicacion`,`detalle`,`precio`,`zona`,`imagenurl`,`rubro`,`condicion`,`idusuario`,`tipo` FROM `publicacion_t` WHERE `tipo`= "servicio"; ', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
+const obtenerPublicacionProductos = (req, res)=>{
+    
+    conexion_db.query('SELECT `id`,`publicacion`,`detalle`,`precio`,`zona`,`imagenurl`,`rubro`,`condicion`,`idusuario`,`tipo` FROM `publicacion_t` WHERE `tipo`= "producto"; ', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
 
 const obtenerIdUltimaPublicacion = (req, res)=>{
     
@@ -164,6 +190,8 @@ module.exports = {
                  editarComentario,
                  obtenerIdUltimaPublicacion,
                  agregarImagen,
+                 obtenerPublicacionServicios,
+                 obtenerPublicacionProductos,
                  agregarPerfil
             }
   

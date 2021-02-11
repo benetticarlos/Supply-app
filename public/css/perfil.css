@@ -26,6 +26,11 @@
   width: 7vw;
 }
 
+#btnActualizaContrasena,
+#btnActualizaEmail{
+  margin-top: 4px;
+}
+
 /* medias queries */
 @media (max-width: 768px) {
   .container {
