@@ -68,19 +68,19 @@
             </div>
             <div class="mb-3">
                 <label for="formGroupExampleInput3" class="labelForm form-label">Teléfono (opcional)</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput3"
+                <input id="inputTelefono" type="text" class="controlForm form-control" id="formGroupExampleInput3"
                     placeholder="Introduzca un número">
             </div>
             <div class="mb-3" style="width: 100%;">
                 <label for="formGroupExampleInput2" class="labelForm form-label">Elija un avatar</label>
-                <div class="avatares">
+                <div id="avataresContainer" class="avatares">
                     <!-- <ul> -->
-                    <input type="image" src="./images/avatares/avatarH1.svg" alt="" id="avatarH1" name="avatarH1">
-                    <input type="image" src="./images/avatares/avatarM1.svg" alt="" id="avatarM1" name="avatarM1">
-                    <input type="image" src="./images/avatares/avatarH2.svg" alt="" id="avatarH2" name="avatarH2">
-                    <input type="image" src="./images/avatares/avatarM2.svg" alt="" id="avatarM2" name="avatarM2">
-                    <input type="image" src="./images/avatares/avatarH3.svg" alt="" id="avatarH3" name="avatarH3">
-                    <input type="image" src="./images/avatares/avatarM3.svg" alt="" id="avatarM3" name="avatarM3">
+                    <input class="avatarClas" onclick="urlImagen()" type="image" src="./images/avatares/avatarH1.svg" alt="" id="avatarH1" name="avatarH1">
+                    <input class="avatarClas" onclick="urlImagen()" type="image" src="./images/avatares/avatarM1.svg" alt="" id="avatarM1" name="avatarM1">
+                    <input class="avatarClas" onclick="urlImagen()" type="image" src="./images/avatares/avatarH2.svg" alt="" id="avatarH2" name="avatarH2">
+                    <input class="avatarClas" onclick="urlImagen()" type="image" src="./images/avatares/avatarM2.svg" alt="" id="avatarM2" name="avatarM2">
+                    <input class="avatarClas" onclick="urlImagen()" type="image" src="./images/avatares/avatarH3.svg" alt="" id="avatarH3" name="avatarH3">
+                    <input class="avatarClas" onclick="urlImagen()" type="image" src="./images/avatares/avatarM3.svg" alt="" id="avatarM3" name="avatarM3">
                     <!-- <img src="./images/avatares/avatarH1.svg" alt="" id="avatarH1"> -->
                     <!-- <img src="./images/avatares/avatarM1.svg" alt="" id="avatarM1">
                         <img src="./images/avatares/avatarH2.svg" alt="" id="avatarH2">
@@ -88,6 +88,7 @@
                         <img src="./images/avatares/avatarH3.svg" alt="" id="avatarH3">
                         <img src="./images/avatares/avatarM3.svg" alt="" id="avatarM3"> -->
                     <!-- </ul> -->
+                    <button id="btnActualizaEmailAvatar" type="button" class="btn btn-outline-secondary">Actualizar Email y Avatar</button>
                 </div>
             </div>
         </section>
@@ -105,6 +106,7 @@
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/perfil.js"></script>    
 </body>
 </html>

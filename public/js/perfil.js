@@ -77,18 +77,43 @@ btnActualizaEmail.addEventListener("click", ()=>{
 })
 
 
+const avataresContainer = document.querySelectorAll("#avataresContainer")
+const avatarClas = document.querySelector(".avatarClas")
+
+const inputTelefono = document.querySelector("#inputTelefono")
 
 
 
+var valorUrlImg = ""
 
-//actualiza perfil de usuario
+
+const urlImagen = ()=>{    
+        // console.log(document.activeElement.src)
+        valorUrlImg = document.activeElement.src    
+}
+
+btnActualizaEmailAvatar.addEventListener("click", ()=>{
+    //actualiza perfil de usuario
 // var user = firebase.auth().currentUser;
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        user.updateProfile({
+            displayName: inputTelefono.value,
+            photoURL: valorUrlImg
+                  }).then(function() {
+                    imagenNavbarPerfil.src = valorUrlImg
+                    console.log("Actualizacionde Email y Avatar exitoso", inputTelefono.value, valorUrlImg)
+                    console.log("los datos son: ", obtenerPerfilusuario().name, obtenerPerfilusuario().email, obtenerPerfilusuario().photoUrl)
+                  }).catch(function(error) {
+                      console.log("No se actualizaron los datos")
+                  // An error happened.
+              });
+                  
+      // User is signed in.
+    } else {
+      // No user is signed in.
+    }
+  });
 
-// user.updateProfile({
-//   displayName: "Jane Q. User",
-//   photoURL: "https://example.com/jane-q-user/profile.jpg"
-// }).then(function() {
-//   // Update successful.
-// }).catch(function(error) {
-//   // An error happened.
-// });
+})
+

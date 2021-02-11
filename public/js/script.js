@@ -50,13 +50,13 @@ fetch("http://localhost:8080")
     // console.log(data[0].imagenurl)
 
     miDato = data;
-
+    containerTarjeta.innerHTML = ""
     data.forEach((elemento) => {
       // console.log(elemento.id);
       // console.log(elemento.detalle);
       // console.log("esta es la imagen ", elemento.imagenurl);
       console.log(elemento.precio);
-      containerTarjeta.innerHTML = ""
+      
       containerTarjeta.innerHTML += `
         <div id="cargaDinamica" OnClick='editarDatosModal("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}","${elemento.precio}","${elemento.condicion}","${elemento.rubro}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div id="unaTrajeta" class="card">
@@ -84,13 +84,13 @@ fetch("http://localhost:8080")
   //   // console.log(data[0].imagenurl)
 
   //   miDato = data;
-
+  //     containerTarjeta.innerHTML = ""
   //   data.forEach((elemento) => {
   //     // console.log(elemento.id);
   //     // console.log(elemento.detalle);
   //     // console.log("esta es la imagen ", elemento.imagenurl);
   //     console.log(elemento.precio);
-  //     containerTarjeta.innerHTML = ""
+  
   //     containerTarjeta.innerHTML += `
   //       <div id="cargaDinamica" OnClick='editarDatosModal("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}","${elemento.precio}","${elemento.condicion}","${elemento.rubro}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
   //       <div id="unaTrajeta" class="card">
@@ -118,13 +118,13 @@ fetch("http://localhost:8080")
   //   // console.log(data[0].imagenurl)
 
   //   miDato = data;
-
+//     containerTarjeta.innerHTML = ""
   //   data.forEach((elemento) => {
   //     // console.log(elemento.id);
   //     // console.log(elemento.detalle);
   //     // console.log("esta es la imagen ", elemento.imagenurl);
   //     console.log(elemento.precio);
-  //     containerTarjeta.innerHTML = ""
+  
   //     containerTarjeta.innerHTML += `
   //       <div id="cargaDinamica" OnClick='editarDatosModal("${elemento.publicacion}","${elemento.detalle}","${elemento.imagenurl}","${elemento.precio}","${elemento.condicion}","${elemento.rubro}")' class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
   //       <div id="unaTrajeta" class="card">
@@ -144,3 +144,25 @@ fetch("http://localhost:8080")
   //       `;
   //   });
   // });
+
+
+  const imagenNavbarPerfil = document.querySelector("#imagenNavbarPerfil")
+  const obtenerPerfilusuario = ()=>{
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+
+    if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;  
+        return {
+            "telefono" : user.displayName,
+            "email" : user.email,
+            "avatarUrl" : user.photoURL,
+            "uid" : user.uid 
+        }
+    }
+    // console.log("desde f obtenerusuario()", name,email, photoUrl)
+}
