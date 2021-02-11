@@ -13,6 +13,10 @@ app.use(express.static('public'))
 
 //get post put delete
 app.get('/', publicacion_controlles.obtenerPublicacion)
+
+app.get('/filtroServicios', publicacion_controlles.obtenerPublicacionServicios)
+
+app.get('/filtroProductos', publicacion_controlles.obtenerPublicacionProductos)
 //para obseter el ultimo id cargado
 app.get('/ultimoId', publicacion_controlles.obtenerIdUltimaPublicacion)
 

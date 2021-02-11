@@ -55,18 +55,20 @@
     <div class="container">
         <section class="form-productos">
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="labelForm form-label">Nombre de usuario</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput"
-                    placeholder="Indicá que servicio necesitas">
+                <label for="formGroupExampleInput" class="labelForm form-label">Actualiza Contraseña</label>
+                <input id="inputActualizaContrasena" type="password" class="controlForm form-control" id="formGroupExampleInput"
+                    placeholder="Ingresa nueva contraseña">
+                <button id="btnActualizaContrasena" type="button" class="btn btn-outline-secondary">Actualiza contraseña</button>
             </div>
             <div class="mb-3" style="width: 100%;">
-                <label for="formGroupExampleInput2" class="labelForm form-label">email</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput2"
+                <label for="formGroupExampleInput2" class="labelForm form-label">Actualiza Email</label>
+                <input id="inputActualizaEmail" type="email" class="controlForm form-control" id="formGroupExampleInput2"
                     placeholder="dirección e.mail">
+                <button id="btnActualizaEmail" type="button" class="btn btn-outline-secondary">Actualiza contraseña</button>
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput2" class="labelForm form-label">Teléfono (opcional)</label>
-                <input type="text" class="controlForm form-control" id="formGroupExampleInput2"
+                <label for="formGroupExampleInput3" class="labelForm form-label">Teléfono (opcional)</label>
+                <input type="text" class="controlForm form-control" id="formGroupExampleInput3"
                     placeholder="Introduzca un número">
             </div>
             <div class="mb-3" style="width: 100%;">
@@ -101,5 +103,8 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="./js/perfil.js"></script>    
 </body>
 </html>

@@ -16,6 +16,32 @@ const obtenerPublicacion = (req, res)=>{
         }
     })
 }
+const obtenerPublicacionServicios = (req, res)=>{
+    
+    conexion_db.query('select * from publicacion_t while tipo = "servicio"', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
+const obtenerPublicacionProductos = (req, res)=>{
+    
+    conexion_db.query('select * from publicacion_t while tipo = "producto"', (err, result)=>{
+        if(err){
+            throw err
+        
+        }else {           
+           
+                console.log(result)
+                res.send(result)
+        }
+    })
+}
 
 const obtenerIdUltimaPublicacion = (req, res)=>{
     
@@ -149,6 +175,8 @@ module.exports = {
                  borrarComentario,
                  editarComentario,
                  obtenerIdUltimaPublicacion,
-                 agregarImagen
+                 agregarImagen,
+                 obtenerPublicacionServicios,
+                 obtenerPublicacionProductos
             }
   
