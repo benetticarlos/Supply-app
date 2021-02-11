@@ -74,6 +74,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     imagenNavbarPerfilConteiner.style.display = "block";
     iniciarSesionRegistrarse.style.display = "none";
     botonPerfil.style.display = "true";
+    imagenNavbarPerfil.src = obtenerPerfilusuario().email
     console.log("..... logueado fin, escuchador general");
 
     //fin de configuracion para usuario logueado
